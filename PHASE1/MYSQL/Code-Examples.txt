@@ -38,3 +38,6 @@ DROP DATABASE estore;
 UPDATE estore.eproducts SET Price=300.00 WHERE ProductName='Nokia 3210';
 
 DELETE FROM estore.eproducts WHERE ProductName='Nokia 3210';
+
+
+ALTER TABLE estore.eproducts ADD DISCOUNT_RATE INT;
