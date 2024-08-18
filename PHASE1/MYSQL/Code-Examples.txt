@@ -35,4 +35,4 @@ DROP TABLE eproducts;
 
 DROP DATABASE estore;
 
-
+UPDATE estore.eproducts SET Price=300.00 WHERE ProductName='Nokia 3210';
