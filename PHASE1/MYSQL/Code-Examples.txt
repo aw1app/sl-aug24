@@ -41,3 +41,15 @@ DELETE FROM estore.eproducts WHERE ProductName='Nokia 3210';
 
 
 ALTER TABLE estore.eproducts ADD DISCOUNT_RATE INT;
+
+
+TRUNCATE ;
+
+
+INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity, DISCOUNT_RATE) 
+VALUES 
+    ('Nokia 3210', 'Electronics', 299.99, 50, 10),
+    ('HP Laptop', 'Electronics', 899.99, 30, 25),
+    ('Phillps Coffee Maker', 'Home Appliances', 49.99, 100, 20),
+    ('Sony Headphones', 'Electronics', 89.99, 75, 20),
+    ('Bajaj Blender', 'Home Appliances', 29.99, 60, 29);
