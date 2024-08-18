@@ -1,0 +1,11 @@
+ CREATE DATABASE ESTORE;
+ 
+ USE ESTORE;
+ 
+ CREATE TABLE EPRODUCTS (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(100) NOT NULL,
+    Category VARCHAR(50),
+    Price DECIMAL(10, 2),
+    StockQuantity INT
+);
