@@ -53,3 +53,6 @@ VALUES
     ('Phillps Coffee Maker', 'Home Appliances', 49.99, 100, 20),
     ('Sony Headphones', 'Electronics', 89.99, 75, 20),
     ('Bajaj Blender', 'Home Appliances', 29.99, 60, 29);
+    
+    
+SELECT  ProductName,Price  FROM estore.eproducts;
