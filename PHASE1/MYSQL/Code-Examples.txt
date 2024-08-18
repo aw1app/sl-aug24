@@ -12,3 +12,7 @@
 
 INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity)
   VALUES ('Smartphone', 'Electronics', 299.99, 50);
+  
+  
+INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity) 
+ VALUES ('TV', 'Electronics', 30299.99, 5);
