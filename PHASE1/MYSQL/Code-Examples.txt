@@ -33,4 +33,6 @@ VALUES
     
 DROP TABLE eproducts;
 
-DROP DATABASE eproducts;
+DROP DATABASE estore;
+
+
