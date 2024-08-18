@@ -16,3 +16,6 @@ INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity)
   
 INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity) 
  VALUES ('TV', 'Electronics', 30299.99, 5);
+ 
+ 
+SELECT * FROM eproducts;
