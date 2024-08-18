@@ -9,3 +9,6 @@
     Price DECIMAL(10, 2),
     StockQuantity INT
 );
+
+INSERT INTO EPRODUCTS (ProductName, Category, Price, StockQuantity)
+  VALUES ('Smartphone', 'Electronics', 299.99, 50);
