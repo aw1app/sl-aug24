@@ -56,3 +56,18 @@ VALUES
     
     
 SELECT  ProductName,Price  FROM estore.eproducts;
+
+
+SELECT Category, COUNT(*) AS ProductCount FROM EPRODUCTS GROUP BY Category;
+
+
+Challenge:  
+HP Laptop, 25  
+Bajaj Blender, 29
+
+select MAX(Discount_Rate), ProductName from estore.eproducts GROUP BY Category;
+
+
+SOLUTION: 
+select ProductName, Category, Discount_Rate from eproducts where Discount_Rate in (select max(discount_rate) from eproducts group by category);
+
