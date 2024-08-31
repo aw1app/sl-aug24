@@ -6,14 +6,14 @@
     <style>
         p {
             color: rgb(244, 30, 30);
-            font-size:20px;
+            font-size: 20px;
             text-align: right
         }
 
         h2 {
             text-align: center;
             color: black;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             background: #e0ee28;
         }
 
@@ -31,13 +31,13 @@
         /* Class selector */
 
         .class1 {
-            font-size:10px; 
+            font-size: 10px;
             color: rgb(230, 46, 199);
         }
 
         /* Attribute selector */
         [href] {
-            font-size:16px;  
+            font-size: 16px;
         }
 
         [type] {
@@ -46,12 +46,29 @@
 
         /* Attribute=value selector */
         [href="moon"] {
-            font-size:30px;  
+            font-size: 30px;
         }
 
-       
+        div p {
+            font-size: 5px;
+        }
 
+        div>p {
+            font-size: 10px;
+        }
 
+        /* Pseudo classes*/
+        a:link {
+            color: rgb(255, 0, 0)
+        }
+
+        a:hover {
+            color: rgb(54, 229, 38)
+        }
+
+        h1:hover {
+            color: rgb(54, 229, 38)
+        }
     </style>
     <title>Welcome to CSS Family</title>
 </head>
@@ -84,10 +101,26 @@
         <input type="button" value="Submit">
     </form>
 
+
+    <div>
+        <p>Hi1</p>
+        <p>Hi2</p>
+        <p>Hi3</p>
+        <table border="1">
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <p>Hello</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 
 </html>
 
 <br><b>
-CHALLENGE: Add a heading in this page and make it highlighted in orange.
+    CHALLENGE: Add a heading in this page and make it highlighted in orange.
 </b>
