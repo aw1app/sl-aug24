@@ -3,7 +3,6 @@
 function displayFullName ( firstName , lastName ){
 
     return  firstName + " " + lastName;
-
 };
 
 let user1 = {
@@ -22,7 +21,32 @@ console.log(fullNameOfUser1);
 let fullNameOfUser2 = displayFullName (user2.fName, user2.lName );
 console.log(fullNameOfUser2);
 
-// CHALLENGE : Add age for both users, then write a function which return the name of the elder of two user objects.
+// CHALLENGE : Add age for both users, then write a function which returns the name of the elder of two user objects passed to it.
+
+
+</script>
+
+
+<script>
+    //SOLUTION 1
+    class User{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+    }
+    
+    let user3 = new User("John",45);
+    let user4 = new User("Jim",50);
+    
+    console.log("The elder user is " + elder)
+    
+    function elderUser(user1,user2){
+        let elder = (user1.age>user2.age)? user1.name : user2.name;
+        return elder.name;
+    }
+    
+    console.log(elderUser(user3,user4));
 
 
 </script>
