@@ -4,11 +4,11 @@
     ul {
         list-style-type: none;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto 400px auto;
     }
 
     li {
-        margin: 12px;
+        margin: 5px;
         text-align: center;
         padding: 12px;
         margin: 12px;
@@ -67,4 +67,21 @@
     <p>This is the description about the product.</p> <br>
     <a href="">Add to Cart</a>
 </li>
+
+
+<li>
+    <b>Apple Desktop</b>
+    <br>
+    <a href="productDetails.html"></a>
+
+    <img src="../HTML/IMAGES/applebook.png" alt="A shoe" width="200" height="200">
+
+    <!--video width="320" height="240" controls>>    
+    <source src="videos/shoe104.mp4" type="video/mp4"> </video>-->
+
+    <br>
+    <p>This is the description about the product.</p> <br>
+    <a href="">Add to Cart</a>
+</li>
+
 </ul>
