@@ -11,12 +11,12 @@
         age: 25
     };
 
-    console.log("Combined age of JACK and Jenny " + (user1.age + user2.age ) );
+    console.log("Combined age of JACK and Jenny " + (user1.age + user2.age));
 
 
-    // Object creation demo using class template using the "new"
+    // Object creation demo using class template using the "new" operator
 
-    class User{
+    class User {
 
         constructor(name, age) {
             this.name = name;
@@ -28,10 +28,18 @@
     let user3 = new User("Mohan", 23);
     let user4 = new User("Radha", 22);
 
-    console.log("Combined age of Mohan and Radha " + (user3.age + user4.age ) );
+    console.log("Combined age of Mohan and Radha " + (user3.age + user4.age));
 
 
     //Challenge: Create another user user5 based on the above class and output if user5 is elder to user3 or not
+    let user5 = new User("rohan", 20);
+
+    if (user5.age > user3.age) {
+        console.log("User5 is older");
+    }
+    else {
+        console.log("User3 is older");
+    }
 
 
 </script>
