@@ -1,0 +1,70 @@
+
+<style>
+
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    li {
+        margin: 12px;
+        text-align: center;
+        padding: 12px;
+        margin: 12px;
+        box-shadow: 0 0 10px rgba(230, 18, 18, 0.1);
+    }
+
+    a {
+        background-color: yellow;
+    }
+
+</style>
+
+
+<ul>
+<li>
+    <b>ABC Shoe</b>
+    <br>
+    <a href="productDetails.html"></a>
+
+    <img src="../HTML/IMAGES/applebook.png" alt="A shoe" width="200" height="200">
+
+    <!--video width="320" height="240" controls>>    
+    <source src="videos/shoe104.mp4" type="video/mp4"> </video>-->
+
+    <br>
+    <p>This is the description about the product.</p> <br>
+    <a href="">Add to Cart</a>
+</li>
+
+<li>
+    <b>XYZ Shirt</b>
+    <br>
+    <a href="productDetails.html"></a>
+
+    <img src="../HTML/IMAGES/applebook.png" alt="A shoe" width="200" height="200">
+
+    <!--video width="320" height="240" controls>>    
+    <source src="videos/shoe104.mp4" type="video/mp4"> </video>-->
+
+    <br>
+    <p>This is the description about the product.</p> <br>
+    <a href="">Add to Cart</a>
+</li>
+
+<li>
+    <b>Raymond Jacket</b>
+    <br>
+    <a href="productDetails.html"></a>
+
+    <img src="../HTML/IMAGES/applebook.png" alt="A shoe" width="200" height="200">
+
+    <!--video width="320" height="240" controls>>    
+    <source src="videos/shoe104.mp4" type="video/mp4"> </video>-->
+
+    <br>
+    <p>This is the description about the product.</p> <br>
+    <a href="">Add to Cart</a>
+</li>
+</ul>
