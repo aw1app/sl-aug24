@@ -1,0 +1,30 @@
+<script>
+
+    let colors = [
+            "green",
+            "yellow",
+            "blue",
+            "white",
+            "grey",
+            "red"
+        ];
+
+        colors.push('purple');
+        
+        // can we store class obj also ?
+
+        let resultArray = colors.splice (1,2,'orange', 'purple');
+
+        // Find demo
+        // Find if orange is in the colors
+
+
+       let foundOrange =  colors.find( col => col==='orange'  );
+
+       if(foundOrange)
+       console.log("Orange was Found");
+       else
+       console.log("Orange was not Found in colors array");
+
+
+</script>
