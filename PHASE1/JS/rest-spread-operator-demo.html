@@ -1,0 +1,70 @@
+<script>
+    class Student {
+        constructor(name, age, height) {
+            this.name = name;
+            this.age = age;
+            this.height = height;
+        }
+    };
+
+    
+
+    // 1. Create an array of 5 students and using a loop display only thier names.
+
+    let studentsArray = [
+        new Student("ram", 28, 5.9),
+        new Student("sam", 19, 5.5),
+        new Student("jay", 40, 6.0),
+        new Student("mohan", 18, 5.4),
+        new Student("rohan", 21, 5.8)
+    ];
+
+    // Rest operator
+
+    let [A,B, Z,  ...C] = studentsArray; // Z will be jay; c- mohan,rohan
+
+    //console.log (C);
+    C.forEach( c => console.log(c.name));
+
+
+</script>
+
+
+<script>
+//Spread operator 
+console.log("\n\n Spread operator demo" )
+
+let  studentsGroup1 = [
+new Student("ram", 28, 5.9),
+new Student("sam", 19, 5.5)
+];
+
+let  studentsGroup2 = [
+new Student("Prema", 28, 5.9),
+new Student("Palani", 19, 5.5)
+];
+
+let combinedGroup  = [ ...studentsGroup1, new Student("Shama", 28, 5.9)    ];
+combinedGroup.forEach( c => console.log(c.name));
+
+console.log("\n\n combinedGroup2" )
+let combinedGroup2  = [ ...studentsGroup1, ...studentsGroup2    ];
+combinedGroup2.forEach( c => console.log(c.name));
+
+</script>
+
+
+<script>
+
+    function add(x,y,z) {
+        return x+y+z;
+    }
+
+   let ageArr = [2,5, 7];
+
+   //let res = add(ageArr[0] , ageArr[1] ,ageArr[2] );
+   let res =  add(...ageArr)
+   console.log(`Sum of all the ages is ${res}`);
+
+
+</script>

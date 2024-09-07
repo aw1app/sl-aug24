@@ -76,8 +76,10 @@
     sa.push(new Student("Cib",19,5.4));
     sa.push(new Student("Dolly",43,4.6));
     sa.push(new Student("Varun",22,6.6));
-    console.log("student "+sa.shift().name+" and student "+sa.shift().name+" are irregular so detained from college");
-   sa.filter((i)=>{
+    //console.log("student "+sa.shift().name+" and student "+sa.shift().name+" are irregular so detained from college");
+    console.log(`student ${sa.shift().name} and student ${sa.shift().name} are irregular so detained from college`);
+    // Filter studensts whose age is > 21
+    sa.filter((i)=>{
     if(i.age>21){
             console.log(`${i.name} ${i.age}`);   
         }
