@@ -2,18 +2,51 @@
 
     class Student {
         constructor(name, age, height) {
-          this.name = name;
-          this.age = age;
-          this.height = height;
+            this.name = name;
+            this.age = age;
+            this.height = height;
         }
-      };
+    };
 
 
-      // 1. Create an array of 5 students and using a loop display only thier names.
+    // 1. Create an array of 5 students and using a loop display only thier names.
 
-      let studentsArray = [];
+    let studentsArray = [
+        new Student("ram", 18, 5.9),
+        new Student("sam", 19, 5.5),
+        new Student("jay", 20, 6.0),
+        new Student("mohan", 18, 5.4),
+        new Student("rohan", 21, 5.8)
+    ];
+
+
+    // Print only the names
+    for (let i = 0; i <= studentsArray.length - 1; i++) {
+        console.log(studentsArray[i].name);
+    }
+
+    // SOLUTION 2
+    console.log("SOLUTION 2");
+    const s1 = new Student("A", 100, 20);
+    const s2 = new Student("B", 200, 30);
+    const s3 = new Student("C", 300, 44);
+    const s4 = new Student("D", 400, 22);
+    const s5 = new Student("E", 500, 25);
+
+
+    let studentArray = [];
+    studentArray.push(s1);
+    studentArray.push(s2);
+    studentArray.push(s3);
+    studentArray.push(s4);
+    studentArray.push(s5);
+
+    for (let s = 0; s < studentArray.length; s++)
+        console.log(studentArray[s].name)
 
 
 
+    // 2. Students are index 1 and 2 are not regular to the college.
+    // Remove them and print the removed students names
 
 </script>
