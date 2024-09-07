@@ -48,5 +48,10 @@
 <script>
     // 2. Students at index 1 and 2 are not regular to the college.
     // Remove them and print the removed students names
+    console.log("CHALENGE 2 Removed student names")
 
+    let removedStudentsArr = students.slice(1, 3); // will remove students starting from index 1 upto index 3 (not including index 3)
+
+    for (let s = 0; s < removedStudentsArr.length; s++)
+        console.log(removedStudentsArr[s].name)
 </script>
