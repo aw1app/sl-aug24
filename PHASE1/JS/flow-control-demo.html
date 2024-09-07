@@ -86,6 +86,40 @@
      // CHALLENGE Create an array of 4 Car objects with properties, name, topSpeed. 
     // Use a switch -- case statement to print all those cars that have speed > 100
 
-       
+    console.log("SOLUTION ");
+    class Car {
+        constructor(name, topSpeed) {
+            this.name = name;
+            this.topSpeed = topSpeed
+        }
+    };
+    
+    const car1 = new Car("Nexon", 235);
+    const car2 = new Car("Punch", 220);
+    const car3 = new Car("Audi", 275);
+    const car4 = new Car("Benz", 300);
+    
+    const cars = [car1, car2, car3, car4];
+    
+    //console.log(cars);
+    console.log("TOP SPEED OF THE CARS: ");
+    for(let i=0; i < cars.length; i++) {
+        console.log(cars[i].topSpeed);
+    }
 
 </script>
+
+<script>
+    console.log("SOLUTION ");
+    const cars1 = [
+      { name: 'Ferrari', topSpeed: 200 },
+      { name: 'Lamborghini', topSpeed: 220 },
+      { name: 'Porsche', topSpeed: 210 },
+      { name: 'Bugatti', topSpeed: 250 }
+  ];
+  i = 0;
+  while (i < cars1.length) {
+      console.log(cars1[i].topSpeed);
+      i++;
+  }
+  </script>
