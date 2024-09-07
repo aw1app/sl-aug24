@@ -12,9 +12,9 @@
     // 1. Create an array of 5 students and using a loop display only thier names.
 
     let studentsArray = [
-        new Student("ram", 18, 5.9),
+        new Student("ram", 28, 5.9),
         new Student("sam", 19, 5.5),
-        new Student("jay", 20, 6.0),
+        new Student("jay", 40, 6.0),
         new Student("mohan", 18, 5.4),
         new Student("rohan", 21, 5.8)
     ];
@@ -62,6 +62,26 @@
     // 3. Print names of the students along with thier age of all those students whose age is > 21
     // Use filter function
 
-    console.log("CHALENGE 3 student names & age of all whose age is > 21")
+    console.log("\n\nCHALENGE 3 student names & age of all whose age is > 21");
+    let studAgeGt21 = studentsArray.filter(s => s.age > 21);
+
+    for (let student of studAgeGt21)
+        console.log(student.name, student.age);
+
+
+    //SOLTION
+    let sa=[];
+    sa.push(new Student("abhi",21,5.6));
+    sa.push(new Student("Bobby",16,5.9));
+    sa.push(new Student("Cib",19,5.4));
+    sa.push(new Student("Dolly",43,4.6));
+    sa.push(new Student("Varun",22,6.6));
+    console.log("student "+sa.shift().name+" and student "+sa.shift().name+" are irregular so detained from college");
+   sa.filter((i)=>{
+    if(i.age>21){
+            console.log(`${i.name} ${i.age}`);   
+        }
+   })
+
 
 </script>
