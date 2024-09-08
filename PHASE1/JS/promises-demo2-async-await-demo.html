@@ -1,0 +1,67 @@
+<script>
+
+    let sumNaturalNumber = (n) => {
+        let sum= 0;
+        for (let i = 0; i < n; i++) {
+            sum=sum+i;
+         };
+
+        return sum;
+    };
+
+   
+    // Promises 
+    function  doSumAsynchrounsly(num){
+
+        let myPromise = new Promise(
+
+        (f1, f2) => {
+
+            // do some long runing job
+            let result = sumNaturalNumber( num );
+
+            let jobSuccess = true; // simulating the job failure
+            if (jobSuccess) {
+                f1(result);
+            } else {
+                f2(new Error("Could not do the sum"));
+            }
+
+        }
+
+        );
+
+        return myPromise;
+    }
+
+    
+    let prom100000 = doSumAsynchrounsly(100000); // 
+    prom100000
+    .then( res => console.log (res))
+    .catch( err => console.log (err) );
+
+
+    let prom100 =  doSumAsynchrounsly(100); // 
+    prom100
+    .then( res => console.log (res))
+    .catch( err => console.log (err) );
+
+
+    let prom10000 =  doSumAsynchrounsly(10000); // 
+    prom10000
+    .then( res => console.log (res))
+    .catch( err => console.log (err) );
+
+
+    let prom1000 =  doSumAsynchrounsly(1000); // 
+    prom1000
+    .then( res => console.log (res))
+    .catch( err => console.log (err) );
+
+
+
+
+   
+
+</script>
+
