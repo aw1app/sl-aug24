@@ -17,20 +17,28 @@
 
     function showStudentNames(){
 
-        let arrOfNames = studentsArray.map(s => `<li> ${s.name} </li>`);
+        let arrOfNames = studentsArray.map( s => `<li> ${s.name} </li>`);
+        console.log(arrOfNames);
 
         nameBulletedList = '';
         for(let elem of arrOfNames){
-            nameBulletedList = elem + nameBulletedList;
+            nameBulletedList =  nameBulletedList +  elem;
         };
-        //console.log(nameBulletedList);
+        console.log(nameBulletedList);
 
        document.getElementById("stuList").innerHTML = nameBulletedList;
+    }
 
+    function f1(){
+        console.log("mouse enter the h1 element");       
+    }
+
+    let f2 = () => {
+        console.log("mouse left the h1 element");       
     }
 
 </script>
 
-<h1>Map Demo</h1>
+<h1 onmouseenter="f1()" onmouseleave="f2()">Map Demo</h1>
 <ul id="stuList"> </ul>
 <button onclick="showStudentNames()"> Show Student list </button>
