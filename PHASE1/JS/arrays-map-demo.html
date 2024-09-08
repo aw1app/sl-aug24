@@ -36,12 +36,27 @@
     let f2 = () => {
         console.log("mouse left the h1 element");       
     }
+    
+    // SOLUTION to CHALLENGE
+    let f3 = () => {
+        document.getElementById("myh1").style.color = "blue";
+    }
 
+    let f4 = (event) => {
+        document.getElementById("messages").innerHTML =  event.target.value;
+    }
 </script>
 
-<h1 id="myh1" onmouseenter="f1()" onmouseleave="f2()">Map Demo</h1>
+<h1 id="myh1" onmouseenter="f1()" onmouseleave="f2()" onclick="f3()">Map Demo</h1>
 <ul id="stuList"> </ul>
 <button onclick="showStudentNames()"> Show Student list </button>
 
-// CHALLENGE : When you click the the h1 element "Map Demo" 
-// it should become red colored "Map Demo"
+<!-- // CHALLENGE : When you click the the h1 element "Map Demo" 
+// it should become red colored "Map Demo" -->
+<br>
+<div id="messages"> </div>
+
+<br><br>
+<form>
+    <input type="text" value="100" onchange="f4(event)" >
+</form>
