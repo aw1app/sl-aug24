@@ -55,16 +55,36 @@ combinedGroup2.forEach( c => console.log(c.name));
 
 
 <script>
-
+    function log(...args) {
+        console.log(...args);
+      }
+      
+/*
     function add(x,y,z) {
         return x+y+z;
-    }
+    };
+    */
 
-   let ageArr = [2,5, 7];
+    let add = (x, y, z) => x + y + z;
+
+   let ageArr = [2,5, 7,14,3];
 
    //let res = add(ageArr[0] , ageArr[1] ,ageArr[2] );
    let res =  add(...ageArr)
-   console.log(`Sum of all the ages is ${res}`);
+   log(`Sum of all the ages is ${res}`);
+
+   // CHALLENGE: Rewrite above using arrow function.
+</script>
+
+<script>
+// 
+log('\n\n <b>Array map function demo</b>');
+
+let nameCaptilised = studentsArray.map( stu => stu.name.toUpperCase());
+nameCaptilised.forEach( c => log(c));
+
 
 
 </script>
+
+<h1>Rest and Spread Operators Demo </h1>

@@ -1,0 +1,36 @@
+<script src="student.js"></script>
+
+
+<script>
+
+    let studentsArray = [
+        new Student("ram", 28, 5.9),
+        new Student("sam", 19, 5.5),
+        new Student("jay", 40, 6.0),
+        new Student("mohan", 18, 5.4),
+        new Student("rohan", 21, 5.8)
+    ];
+
+    //let arrOfNames = studentsArray.map(s => s.name);
+
+    //arrOfNames.forEach( elem => console.log(elem));
+
+    function showStudentNames(){
+
+        let arrOfNames = studentsArray.map(s => `<li> ${s.name} </li>`);
+
+        nameBulletedList = '';
+        for(let elem of arrOfNames){
+            nameBulletedList = elem + nameBulletedList;
+        };
+        //console.log(nameBulletedList);
+
+       document.getElementById("stuList").innerHTML = nameBulletedList;
+
+    }
+
+</script>
+
+<h1>Map Demo</h1>
+<ul id="stuList"> </ul>
+<button onclick="showStudentNames()"> Show Student list </button>

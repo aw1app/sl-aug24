@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Logs Demo</title>
+
+    <!-- Include the logger file to make functions globally available -->
+    <script src="./coloredLogger.js"></script>
+</head>
+<body>
+    <h1>Check the console for colored logs!</h1>
+
+    <!-- Use the functions directly in another script -->
+    <script>
+        // Using the logger functions
+        logRed("This is a red message!");
+        logGreen("This is a green message!");
+        logYellow("This is a yellow message!");
+        logBlue("This is a blue message!");
+
+        logRedBg("This message has a red background and white text!");
+        logGreenBg("This message has a green background and black text!");
+        logYellowBg("This message has a yellow background and black text!");
+        logBlueBg("This message has a blue background and white text!");
+    </script>
+</body>
+</html>
