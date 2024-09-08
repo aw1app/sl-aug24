@@ -1,0 +1,48 @@
+<script>
+
+    let add = (a, b) => {
+
+        for (let i = 0; i < 1000000000; i++) { };
+
+        console.log("Inside add function " + (a + b));
+        return a + b;
+    };
+
+    /*
+    console.log("STATEMENT1");
+    console.log("STATEMENT2");
+    console.log(`STATEMENT 3  ${add(2, 5)}`);
+    console.log("STATEMENT4");
+    console.log("STATEMENT5");
+    */
+
+    // Promises
+
+    let myPromise = new Promise(
+
+        (f1, f2) => {
+
+            // do some long runing job
+            let result = add(2, 5);
+
+            let jobSuccess = false; // simulating the job failure
+            if (jobSuccess) {
+                f1(result);
+            } else {
+                f2(new Error("Could not do the sum"));
+            }
+
+        }
+
+    );
+
+    console.log("STATEMENT10");
+    console.log("STATEMENT20");
+    myPromise
+    .then ( res => console.log(res))
+    .catch( err => console.log(err));
+    console.log("STATEMENT40");   
+    console.log("STATEMENT50");
+
+</script>
+
