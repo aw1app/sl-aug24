@@ -1,4 +1,4 @@
-<script>
+<script type="module">
 
     let sumNaturalNumber = (n) => {
         let sum= 0;
@@ -31,12 +31,9 @@
 
         );
 
-        // return myPromise;
-        myPromise
-        .then( res => console.log (res))
-        .catch(err => console.log (err));
+        return myPromise;
 
-        console.log( ` Launched promise for ${num }`);
+        //console.log( ` Launched promise for ${num }`);
     }
 
     
