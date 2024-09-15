@@ -23,8 +23,9 @@ export class ProductListComponent {
 
   }
 
-  addToCart():void{
-   console.log(" Inside addToCart() of ProductListComponent");    
+  addToCart(prod:Product):void{
+   console.log(" Inside addToCart() of ProductListComponent"); 
+   console.log(`Add ${prod.name} to the Cart`);      
   }
 
   changePrice(prod:Product) {

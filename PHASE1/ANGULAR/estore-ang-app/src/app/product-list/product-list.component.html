@@ -16,7 +16,7 @@
         <td>{{prod.name}}</td>
         <td>{{prod.price}}</td>
         <td><img src="{{prod.imagePath}}" width="100" height="50"></td>
-        <td><button (click)="addToCart()"> Add TO Cart </button> </td>
+        <td><button (click)="addToCart(prod)"> Add TO Cart </button> </td>
         <td><button (click)="changePrice(prod)" > Bid for the Product </button> </td>
     </tr>
 
