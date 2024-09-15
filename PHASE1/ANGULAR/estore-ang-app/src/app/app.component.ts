@@ -11,4 +11,11 @@ import { ProductComponent } from "./product/product.component";
 })
 export class AppComponent {
   title = 'estore-ang-app';
+
+  x:number  = 10;
+  enabled:boolean = false;
+
+  w:number=50;
+h:number=100;
+
 }
