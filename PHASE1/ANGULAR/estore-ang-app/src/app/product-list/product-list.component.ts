@@ -23,6 +23,10 @@ export class ProductListComponent {
 
   }
 
+  addToCart():void{
+   console.log(" Inside addToCart() of ProductListComponent");    
+  }
+
 }
 
 //CHALLENGE: Display the products in a nice table
