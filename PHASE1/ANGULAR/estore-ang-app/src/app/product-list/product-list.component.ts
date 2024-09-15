@@ -24,3 +24,5 @@ export class ProductListComponent {
   }
 
 }
+
+//CHALLENGE: Display the products in a nice table
