@@ -14,6 +14,7 @@ export class ProductComponent {
   @Input() price!: number;
   @Input() description!: string;
   @Input() inStock!: boolean;
+  @Input() imagePath!: string;
 
   product: Product = new Product(); // Initialize product with default values
 
@@ -24,6 +25,7 @@ export class ProductComponent {
     this.product.price=this.price;
     this.product.description=this.description;
     this.product.inStock=this.inStock;
+    this.product.imagePath=this.imagePath;
   }
 
 }
