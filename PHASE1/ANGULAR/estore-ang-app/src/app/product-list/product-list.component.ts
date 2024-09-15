@@ -27,6 +27,10 @@ export class ProductListComponent {
    console.log(" Inside addToCart() of ProductListComponent");    
   }
 
+  changePrice(prod:Product) {
+    prod.price = prod.price - (prod.price * (1 / 10));
+  }
+
 }
 
 //CHALLENGE: Display the products in a nice table
