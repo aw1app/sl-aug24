@@ -10,16 +10,27 @@
         <th>Name</th>
         <th>Price</th>
         <th>Picture</th>
+        <th>Cart</th>
+        <th>Bid</th>
+        <th>Your Comments</th>
     </thead>
 
     <tr *ngFor="let prod of products">
-        <td>{{prod.name}}</td>
-        <td>{{prod.price}}</td>
+        <td [style.color]="prod.inStock ? 'red' : 'grey'" >{{prod.name}}</td>
+        <td [style.color]="prod.price <10000 ? 'grey' : 'orange'" >{{prod.price + 1 }}</td>
         <td><img src="{{prod.imagePath}}" width="100" height="50"></td>
-        <td><button (click)="addToCart(prod)"> Add TO Cart </button> </td>
+        <td><button (click)="addToCart(prod)" [disabled]="!prod.inStock"> Add TO Cart </button> </td>
         <td><button (click)="changePrice(prod)" > Bid for the Product </button> </td>
+
+        
     </tr>
 
 </table>
 
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <input type="text" [(FormControl)]="abc" > 
+</form>
+
+
 CHALLENGE: Add another button that will send click event to the component. There it should change the price of the product by 10% less.
+CHALLENGE: if the price is less than 10000, the price should be shown in bold 

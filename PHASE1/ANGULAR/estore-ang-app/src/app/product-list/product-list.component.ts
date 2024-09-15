@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { Product } from '../product';
 import { CommonModule } from '@angular/common';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators  } from '@angular/forms';
 
 @Component({
   selector: 'product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
 
   products!: Product[];
+
+  abc:FormControl = new FormControl();
 
   constructor() {
 
