@@ -18,8 +18,8 @@ export class HttpBasedProductService {
    }
 
    //CHALLENGE: Enhance the HTTPbased product service that will delete a product from the products.
-   deleteProduct(id:number):void {  
-     this.http.delete<void>(this.apiBaseUrl+"/"+id);   
+   deleteProduct(id:number):Observable<void> {  
+     return this.http.delete<void>(this.apiBaseUrl+"/"+id);   
    }
 
 
