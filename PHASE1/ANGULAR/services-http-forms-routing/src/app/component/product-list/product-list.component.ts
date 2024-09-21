@@ -8,39 +8,58 @@ import { HttpBasedProductService } from '../../services/http-based-product.servi
   selector: 'product-list',
   standalone: true,
   imports: [CommonModule],
-  providers:[ProductService, HttpBasedProductService],
+  providers: [ProductService, HttpBasedProductService],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent implements OnInit{
+export class ProductListComponent implements OnInit {
 
   products!: Product[];
 
 
-/*  productService!:ProductService;
+  /*  productService!:ProductService;
+  
+    constructor( productService:ProductService){
+      this.productService = productService;
+    }
+  
+    ngOnInit():void {
+      this.products = this.productService.getAllProducts();
+    }
+  
+    */
 
-  constructor( productService:ProductService){
-    this.productService = productService;
-  }
+  httpbasedProductService!: HttpBasedProductService;
 
-  ngOnInit():void {
-    this.products = this.productService.getAllProducts();
-  }
-
-  */
-
-  httpbasedProductService!:HttpBasedProductService;
-
-  constructor( httpbasedProductService:HttpBasedProductService){
+  constructor(httpbasedProductService: HttpBasedProductService) {
     this.httpbasedProductService = httpbasedProductService;
   }
 
-  ngOnInit():void {
-    this.httpbasedProductService.getAllProducts().subscribe( 
-      
-      (response) =>    {this.products =  response}
-      
+  ngOnInit(): void {
+    this.httpbasedProductService.getAllProducts().subscribe(
+
+      (response) => { this.products = response }
+
     );
   }
+
+
+  deleteProduct(id: number): void {
+    this.httpbasedProductService.deleteProduct(id).subscribe(
+
+      () => {
+
+        // Fetch the updated product list 
+        this.httpbasedProductService.getAllProducts().subscribe(
+
+          (response) => { this.products = response }
+
+        );
+
+      }
+
+    )
+  }
+
 
 }

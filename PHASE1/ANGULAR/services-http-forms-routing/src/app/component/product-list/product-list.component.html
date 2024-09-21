@@ -32,6 +32,11 @@ No products to display
         <button class="product-buy-btn" [disabled]="!product.inStock">
           Buy Now
         </button>
+
+        <button (click)="deleteProduct(product.id)">
+            DELETE
+          </button>
+
       </div>
     </div>
   </div>
