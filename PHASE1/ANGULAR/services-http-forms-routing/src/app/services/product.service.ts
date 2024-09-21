@@ -17,7 +17,8 @@ export class ProductService {
 
    }
 
-   getAllProducts():Product[]{
+   getAllProducts():Product[]{  
+    // console.log("In getAllProducts()of service " + this.products.length);
     return this.products;
    }
 }

@@ -13,11 +13,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductListComponent implements OnInit{
 
-  products: Product[] =[];
+  products!: Product[];
 
   productService!:ProductService;
 
   constructor( productService:ProductService){
+    this.productService = productService;
   }
 
   ngOnInit():void {
