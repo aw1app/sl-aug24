@@ -14,9 +14,7 @@ export class HttpBasedProductService {
   constructor(private http: HttpClient) { }
 
   getAllProducts():Observable<Product[]> {  
-
-    return this.http.get<Product[]>(this.apiBaseUrl);
-   
+    return this.http.get<Product[]>(this.apiBaseUrl);   
    }
 
 
