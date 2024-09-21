@@ -1,6 +1,12 @@
 {
   "products": [
-    { "id": 1, "name": "HP Laptop", "price": 100000, "description":"HP Gaming Laptop", "inStock": true,  "imagePath":"images/111.png"},
-    { "id": 2, "name": "Dell Laptop", "price": 200000, "description":"Dell Enterprise Laptop", "inStock": true,  "imagePath":"images/222.png" }
+    {
+      "id": "1",
+      "name": "HP Laptop",
+      "price": 100000,
+      "description": "HP Gaming Laptop",
+      "inStock": true,
+      "imagePath": "images/111.png"
+    }
   ]
 }
