@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await True Concurrency Demo</title>
+</head>
+<body>
+    <h1>Check the console for asynchronous behavior with true concurrency!</h1>
+
+    <script>
+        // Function to sum natural numbers up to n
+        let sumNaturalNumber = (n) => {
+            let sum = 0;
+            for (let i = 0; i < n; i++) {
+                sum = sum + i;
+            }
+            return sum;
+        };
+
+        // Asynchronous function using a Promise to simulate long-running operations
+        function doSumAsynchronously(num, id) {
+            return new Promise((resolve, reject) => {
+                const startTime = Date.now(); // Record the start time
+                
+                // Simulate a long-running job
+                let result = sumNaturalNumber(num);
+
+                let jobSuccess = true; // Simulating job success
+                const endTime = Date.now(); // Record the end time
+
+                if (jobSuccess) {
+                    resolve({ result, id, duration: endTime - startTime });
+                } else {
+                    reject(new Error(`Could not do the sum for Promise ${id}`));
+                }
+            });
+        }
+
+        // Function to demonstrate concurrent execution of async tasks
+        async function demonstrateAsynchronousBehavior() {
+            console.log("Starting asynchronous tasks...");
+
+            // Running promises concurrently and handling them as they resolve
+            const promises = [
+                doSumAsynchronously(500000000, 1),
+                doSumAsynchronously(100000000, 2),
+                doSumAsynchronously(10000000, 3),
+                doSumAsynchronously(1000000, 4)
+            ];
+
+            // Using Promise.all to handle resolved promises
+            promises.forEach(promise => {
+                promise.then(({ result, id, duration }) => {
+                    console.log(`Promise ${id} resolved in ${duration} ms`);
+                    console.log(`Result of promise ${id}: ${result}`);
+                }).catch(error => {
+                    console.error(error.message);
+                });
+            });
+
+            console.log("All asynchronous tasks have been launched!");
+        }
+
+        // Run the demonstration
+        demonstrateAsynchronousBehavior();
+    </script>
+</body>
+</html>
