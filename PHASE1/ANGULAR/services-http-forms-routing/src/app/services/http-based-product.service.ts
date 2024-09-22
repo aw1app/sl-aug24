@@ -7,6 +7,7 @@ import { Product } from '../model/product';
   providedIn: 'root'
 })
 export class HttpBasedProductService {
+ 
 
   apiBaseUrl:string = "http://localhost:3000/products"
 
@@ -17,6 +18,10 @@ export class HttpBasedProductService {
   getAllProducts():Observable<Product[]> {  
     return this.httpClt.get<Product[]>(this.apiBaseUrl);   
    }
+
+   getProduct(productId: string) :Observable<Product>{
+    return this.httpClt.get<Product>(this.apiBaseUrl+"/"+productId); 
+  }
 
    // D of CRUD
    //CHALLENGE: Enhance the HTTPbased product service that will delete a product from the products.

@@ -31,6 +31,14 @@
       "description": "",
       "inStock": true,
       "imagePath": "images/444.png"
+    },
+    {
+      "id": "3556",
+      "name": "Bajaj Scooter",
+      "price": "20000",
+      "description": "",
+      "inStock": true,
+      "imagePath": "images/444.png"
     }
   ]
 }
