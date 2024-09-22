@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpBasedProductService } from '../../services/http-based-product.service';
 import { Product } from '../../model/product';
@@ -23,8 +23,8 @@ export class AddProductComponent {
     this.productForm = this.fb.group(
 
       {
-        productName: [''],
-        productPrice: [0],
+        productName: ['', [Validators.required, Validators.minLength(3)]],
+        productPrice: ['', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/), Validators.max(100000)]]
       }
 
     );
