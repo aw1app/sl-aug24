@@ -39,7 +39,7 @@ export class AddProductComponent {
 
     let id =this.getRandomInt(1000,10000);
 
-    let tempProduct = new Product(id, name, price, '', true, 'images/444.png');
+    let tempProduct = new Product(""+id, name, price, '', true, 'images/444.png');
 
     this.httpbasedProductService.addProduct(tempProduct).subscribe(
 

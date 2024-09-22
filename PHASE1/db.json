@@ -23,6 +23,14 @@
       "description": "",
       "inStock": true,
       "imagePath": "images/444.png"
+    },
+    {
+      "id": 8512,
+      "name": "Samsung Mixer",
+      "price": "7000",
+      "description": "",
+      "inStock": true,
+      "imagePath": "images/444.png"
     }
   ]
 }

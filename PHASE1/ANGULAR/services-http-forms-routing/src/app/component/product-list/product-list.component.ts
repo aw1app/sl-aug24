@@ -45,7 +45,7 @@ export class ProductListComponent implements OnInit {
   }
 
 
-  deleteProduct(id: number): void {
+  deleteProduct(id: string): void {
     this.httpbasedProductService.deleteProduct(id).subscribe(
 
       () => {
