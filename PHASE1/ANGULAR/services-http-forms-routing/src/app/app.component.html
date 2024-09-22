@@ -9,7 +9,13 @@
 
 <add-product></add-product> -->
 
-<h2>Welcome to Estore</h2>
+<h1>Welcome to Estore</h1>
+
+<ul class="horizontal-nav">
+    <li><a [routerLink]="['']">Home</a></li>  
+    <li><a [routerLink]="['/product-list']">Product List</a></li>
+    <li><a [routerLink]="['/add-product']">Add New Product</a></li>
+</ul>
 
 
 <router-outlet></router-outlet>
