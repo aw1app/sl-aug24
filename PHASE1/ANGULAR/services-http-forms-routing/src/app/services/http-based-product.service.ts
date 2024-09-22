@@ -13,7 +13,7 @@ export class HttpBasedProductService {
 
   constructor(private httpClt: HttpClient) {}
 
-  // R of CRUD
+  // READ of CRUD
   getAllProducts():Observable<Product[]> {  
     return this.httpClt.get<Product[]>(this.apiBaseUrl);   
    }
@@ -24,7 +24,7 @@ export class HttpBasedProductService {
      return this.httpClt.delete<void>(this.apiBaseUrl+"/"+id);   
    }
 
-   // C of CRUD
+   // CREATE of CRUD
    addProduct(prod:Product):Observable<Product> {  
     return this.httpClt.post<Product>(this.apiBaseUrl, prod);   
   }
