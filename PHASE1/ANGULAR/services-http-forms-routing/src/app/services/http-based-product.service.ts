@@ -25,7 +25,9 @@ export class HttpBasedProductService {
    }
 
    // C of CRUD
-
+   addProduct(prod:Product):Observable<Product> {  
+    return this.httpClt.post<Product>(this.apiBaseUrl, prod);   
+  }
 
 
 }

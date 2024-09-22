@@ -31,7 +31,7 @@ export class AddProductComponent {
 
 
   addProduct():void{
-
+    //this.httpbasedProductService.
   }
 
 }
