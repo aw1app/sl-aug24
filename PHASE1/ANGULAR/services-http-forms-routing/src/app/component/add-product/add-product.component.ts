@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpBasedProductService } from '../../services/http-based-product.service';
 
 @Component({
-  selector: 'app-add-product',
+  selector: 'add-product',
   standalone: true,
   imports: [CommonModule,ReactiveFormsModule],
   providers: [HttpBasedProductService],
