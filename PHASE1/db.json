@@ -7,6 +7,22 @@
       "description": "HP Gaming Laptop",
       "inStock": true,
       "imagePath": "images/111.png"
+    },
+    {
+      "id": 0,
+      "name": "Nokia 3305",
+      "price": "5000",
+      "description": "",
+      "inStock": true,
+      "imagePath": "images/444.png"
+    },
+    {
+      "id": 0,
+      "name": "Dell Phone",
+      "price": "1000",
+      "description": "",
+      "inStock": true,
+      "imagePath": "images/444.png"
     }
   ]
 }
