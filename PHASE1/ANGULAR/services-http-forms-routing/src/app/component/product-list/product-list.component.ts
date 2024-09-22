@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Product } from '../../model/product';
 import { ProductService } from '../../services/product.service';
 import { CommonModule } from '@angular/common';
@@ -17,13 +17,14 @@ export class ProductListComponent implements OnInit {
   products!: Product[];
 
 
-  /*  productService!:ProductService;
+  productService!:ProductService;
   
-    constructor( productService:ProductService){
+    constructor( productService:ProductService, httpbasedProductService: HttpBasedProductService){
       this.productService = productService;
+      this.httpbasedProductService = httpbasedProductService;
     }
   
-    ngOnInit():void {
+  /*  ngOnInit():void {
       this.products = this.productService.getAllProducts();
     }
   
@@ -31,9 +32,9 @@ export class ProductListComponent implements OnInit {
 
   httpbasedProductService!: HttpBasedProductService;
 
-  constructor(httpbasedProductService: HttpBasedProductService) {
-    this.httpbasedProductService = httpbasedProductService;
-  }
+  // constructor(httpbasedProductService: HttpBasedProductService) {
+  //   this.httpbasedProductService = httpbasedProductService;
+  // }
 
   ngOnInit(): void {
     this.httpbasedProductService.getAllProducts().subscribe(

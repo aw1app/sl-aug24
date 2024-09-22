@@ -11,16 +11,20 @@ export class HttpBasedProductService {
   apiBaseUrl:string = "http://localhost:3000/products"
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClt: HttpClient) {}
 
+  // R of CRUD
   getAllProducts():Observable<Product[]> {  
-    return this.http.get<Product[]>(this.apiBaseUrl);   
+    return this.httpClt.get<Product[]>(this.apiBaseUrl);   
    }
 
+   // D of CRUD
    //CHALLENGE: Enhance the HTTPbased product service that will delete a product from the products.
    deleteProduct(id:number):Observable<void> {  
-     return this.http.delete<void>(this.apiBaseUrl+"/"+id);   
+     return this.httpClt.delete<void>(this.apiBaseUrl+"/"+id);   
    }
+
+   // C of CRUD
 
 
 
