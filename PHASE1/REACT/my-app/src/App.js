@@ -5,6 +5,9 @@ import Product from './components/Product';
 
 class App extends Component {
 
+
+
+
   render() {
     // any processing ....
 
@@ -13,7 +16,8 @@ class App extends Component {
 
         Hello React from a Class componet
         <br/>
-        <Product></Product>
+        <Product name="HP Laptop" price="10000"> </Product>
+        <Product name="Samsung Laptop" price="20000"> </Product>
       </div>
     );
 
