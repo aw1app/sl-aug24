@@ -15,11 +15,11 @@ class App extends Component {
     return (
       <div className="App">
 
-        <br/>
+   
         <Product name="HP Laptop" price="10000" avl="true"> </Product>
         <Product name="Samsung Laptop" price="20000" avl="false"> </Product>
 
-      <hr/>
+      <hr/>     <br/>
 
         <ProductF name="F HP Laptop" price="1" avl="true"> </ProductF>
         <ProductF name="F Samsung Laptop" price="2" avl="false"> </ProductF>
