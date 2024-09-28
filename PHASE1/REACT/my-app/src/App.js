@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import Product from './components/Product';
 
 class App extends Component {
 
@@ -11,6 +12,8 @@ class App extends Component {
       <div className="App">
 
         Hello React from a Class componet
+        <br/>
+        <Product></Product>
       </div>
     );
 
