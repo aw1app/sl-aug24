@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+const XYZ = <h1> WELCOME </h1>;
+
 const ProductF = (props) => {
 
 
@@ -13,7 +15,7 @@ const ProductF = (props) => {
 
         <div>
 
-            {/* <p> value of x is {x} </p> */}
+            {XYZ}
             <p>  Name is {props.name} </p>
             <p>  Name is {name} </p>
             <p> value of productPrice is {props.price} </p>
