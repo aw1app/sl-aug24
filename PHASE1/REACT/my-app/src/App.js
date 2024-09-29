@@ -5,6 +5,8 @@ import Product from './components/Product';
 import ProductF from './components/ProductF';
 import ProductList from './components/ProductList';
 
+import Timer from './components/Timer';
+
 class App extends Component {
 
 
@@ -15,6 +17,8 @@ class App extends Component {
 
     return (
       <div className="App">
+
+        <Timer />
 
         <ProductList />
 
