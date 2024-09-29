@@ -3,6 +3,7 @@ import './App.css';
 import { Component } from 'react';
 import Product from './components/Product';
 import ProductF from './components/ProductF';
+import ProductList from './components/ProductList';
 
 class App extends Component {
 
@@ -14,6 +15,8 @@ class App extends Component {
 
     return (
       <div className="App">
+
+        <ProductList />
 
    
         <Product name="HP Laptop" price="10000" avl="true"> </Product>
