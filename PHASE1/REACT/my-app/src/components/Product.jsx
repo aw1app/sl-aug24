@@ -56,7 +56,6 @@ class Product extends Component {
     //validation
     // console.log(evt.target.name.value);
     // console.log(evt.target.price.value);
-
     }
 
     render() {
