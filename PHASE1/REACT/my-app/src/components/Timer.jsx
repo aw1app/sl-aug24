@@ -45,10 +45,10 @@ class Timer extends Component {
     console.log("INSIDE render");
 
     return (
-      <React.Fragment>
+      <>
         <h1>Timer V2: {this.state.seconds} seconds</h1>
         <button onClick={() => this.setState({ seconds: 0 })}>Reset</button>
-      </React.Fragment>
+      </>
     );
   }
 
