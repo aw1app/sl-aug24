@@ -1,8 +1,8 @@
 
 
-const initialState = { count: 0 };
+export const initialState = { count: 0 };
 
-function countReducer(state, action) {
+export function countReducer(state, action) {
 
     switch (action.type) {
         case 'increment':
@@ -12,5 +12,5 @@ function countReducer(state, action) {
         default:
             throw new Error();
     }
-    
+
 }
