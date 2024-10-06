@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Component } from 'react';
 
-function AppDemoUseEffect(props) {
+function AppDemoUseEffectAndDataFetching(props) {
 
   const [products, setProducts] = useState(null);
   const [x,setX]= useState(10);
@@ -15,6 +15,7 @@ function AppDemoUseEffect(props) {
       console.log("INSIDE USE EFFECT");
       fetch('http://localhost:5000/products')
         .then(response => response.json())
+        // .then(data => setProducts(data))
         .then(data => setProducts(data))
         .catch(error => console.error(error));
     }
@@ -66,4 +67,4 @@ return (
 
 }
 
-export default AppDemoUseEffect;
+export default AppDemoUseEffectAndDataFetching;
