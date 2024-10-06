@@ -11,8 +11,10 @@ function Counter() {
             <p> INSIDE COUNTER COMPONENT</p>
             <h3>Count: {state.count}</h3>
 
-            <button onClick={() => dispatch({ type: 'increment' })}> + </button>
-            <button onClick={() => dispatch({ type: 'decrement' })}> - </button>
+            <button onClick={() => dispatch({ type: 'increment' })}> +1 </button>
+            <button onClick={() => dispatch({ type: 'decrement' })}> -1 </button>
+            <button onClick={() => dispatch({ type: 'increment', payload:2 })}> INCREMENT by 2 </button>
+            <button onClick={() => dispatch({ type: 'decrement',payload:2 })}> DECREMENT by 2  </button>
         </div>
     );
 }
