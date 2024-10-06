@@ -17,11 +17,14 @@ root.render(
     <>
     {/* <App /> */}
     {/* <AppDemoUseEffectAndDataFetching /> */}
-    {/* <AppDemoRouter /> */}
+
+    {/* Mini Project */}
+    <AppDemoRouter />
+    
     {/* <AppDemoContext /> */}
     {/* <AppDemoUseReducer /> */}
 
-    <AppDemoCustomHook />
+    {/* <AppDemoCustomHook /> */}
     </>
   </React.StrictMode>
 );

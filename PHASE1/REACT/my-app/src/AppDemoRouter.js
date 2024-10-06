@@ -33,11 +33,14 @@ const AppDemoRouter = () => {
 };
 
 
-//Navbar
+//Navbar.js
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-links">
+      <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>
           <Link to="/list-products">List Products</Link>
         </li>
@@ -51,6 +54,7 @@ const Navbar = () => {
 
 
 //Product Details Component
+// ProductDetails.js
 const Product = ({ product }) => {
   if (!product) return <div>Loading...</div>;
 
@@ -73,6 +77,7 @@ const ProductContainer = ({ products }) => {
 };
 
 //Product Listing Component
+// ProductList.js
 const ProductList = ({ products }) => {
   return (
     <div>

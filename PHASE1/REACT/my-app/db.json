@@ -55,6 +55,14 @@
       "description": "sdsdfsf",
       "inStock": true,
       "imagePath": "rfrfr"
+    },
+    {
+      "id": 55,
+      "name": "Dell Mouse",
+      "price": 250,
+      "description": "dfdfd",
+      "inStock": true,
+      "imagePath": "dfdf"
     }
   ]
 }

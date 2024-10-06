@@ -5,10 +5,8 @@ import useCounter from './hooks/useCounter';
 
 function AppDemoCustomHook() {
 
+  //Use the custom hook we just created.
   const { count, increment, decrement } = useCounter(100);
-
-
-
 
 
   return (
@@ -21,8 +19,6 @@ function AppDemoCustomHook() {
 
     </div>
   );
-
-
 
 }
 
