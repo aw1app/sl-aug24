@@ -4,10 +4,6 @@ import ThemeContext from "./ThemeContext";
 
  const ThemeProvider = (props) => {
 
-    // state = {
-    //     theme: 'light', // default theme
-    //   };
-
       const [theme, setTheme] = useState('light');
 
 
@@ -15,7 +11,6 @@ import ThemeContext from "./ThemeContext";
         setTheme( prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
       };
 
-      
 
       return(
         <ThemeContext.Provider value={ {theme,toggleTheme} }>
@@ -23,7 +18,6 @@ import ThemeContext from "./ThemeContext";
         {props.children}       
 
         </ThemeContext.Provider>
-
       )
 
 

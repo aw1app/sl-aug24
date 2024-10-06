@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
 
-import ThemedButton from './components/ThemeButton';
+import ThemedButton from './components/ThemedButton';
 import ThemeProvider from './contexts/ThemeProvider'
 
 class AppDemoContext extends Component {
