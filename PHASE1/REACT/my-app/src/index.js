@@ -9,6 +9,7 @@ import AppDemoRouter from './AppDemoRouter';
 import reportWebVitals from './reportWebVitals';
 import AppDemoContext from './AppDemoContext';
 import AppDemoUseReducer from './AppDemoUseReducer';
+import AppDemoCustomHook from './AppDemoCustomHook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,9 @@ root.render(
     {/* <AppDemoUseEffectAndDataFetching /> */}
     {/* <AppDemoRouter /> */}
     {/* <AppDemoContext /> */}
-    <AppDemoUseReducer />
+    {/* <AppDemoUseReducer /> */}
+
+    <AppDemoCustomHook />
     </>
   </React.StrictMode>
 );
