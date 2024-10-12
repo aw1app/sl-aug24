@@ -150,7 +150,7 @@ const ProductForm = () => {
 
   return (
     <div>
-      <h2>Create Product</h2>
+       <h2 className="text-center mb-4">Create Product</h2>
 
       <div className="container mt-5">
       <div className="row justify-content-center">
@@ -158,7 +158,7 @@ const ProductForm = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label>ID:</label>
+          <label className="form-label"> ID: </label>
           <input
             type="number"
             name="id"
