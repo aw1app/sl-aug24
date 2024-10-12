@@ -5,6 +5,9 @@ import App from './App';
 import AppDemoUseEffectAndDataFetching from './AppDemoUseEffectAndDataFetching'
 import AppDemoRouter from './AppDemoRouter';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+  
+
 
 import reportWebVitals from './reportWebVitals';
 import AppDemoContext from './AppDemoContext';
