@@ -1,8 +1,9 @@
-import { createStore } from "react-redux";
+import { createStore } from "redux";
 
 
 const initialState = {
-    count: 0
+    count: 0,
+    x:'Hello'
     };
 
 
@@ -11,12 +12,12 @@ const initialState = {
         switch (action.type) {
             case 'increment':
                 
-                    return { count: state.count + 1 };
+                    return { ...state, count: state.count + 1 };
             case 'decrement':
                
-                    return { count: state.count - 1 };
+                    return { ...state, count: state.count - 1 };
             default:
-                throw new Error();
+                return state;
         }
     }
 
