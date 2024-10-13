@@ -4,15 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import store from './mystore';
+// import store from './mystore';
 import { Provider } from 'react-redux';
+
+import AppForTodos from './AppForTodos';
+import todostore from './stores/todostore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}>
     <App />
+    </Provider> */}
+
+
+<Provider store={todostore}>
+    <AppForTodos />
     </Provider>
+
   </React.StrictMode>
 );
 
