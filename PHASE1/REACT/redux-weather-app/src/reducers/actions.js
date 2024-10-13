@@ -8,6 +8,7 @@ export const FETCH_WEATHER_FAILURE = 'FETCH_WEATHER_FAILURE';
 
 export const fetchWeather = (city) => {
     return async (dispatch) => {
+        
         dispatch({ type: FETCH_WEATHER_REQUEST }); // Dispatch request action
 
         try {
