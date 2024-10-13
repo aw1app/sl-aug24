@@ -12,7 +12,10 @@ function AppForTodos() {
 
   const removeTodo = (id) => dispatch ( {type:'REMOVE_TODO', payload: id } );
 
-  const addTodo = (todoObj) => dispatch ( {type:'ADD_TODO', payload: todoObj } );
+  const addTodo = (todoObj) =>{    
+    dispatch ( {type:'ADD_TODO', payload: todoObj } );
+    dispatch({ type: 'increment' }) ;
+  }
 
   const count = useSelector(state => state.countR.count);
 
@@ -27,10 +30,11 @@ function AppForTodos() {
        <AddTodoForm addTodo={addTodo} />
 
       <br/><br/>
-      <Counter count={count} 
+      {/* <Counter count={count} 
      increment={ () => dispatch({ type: 'increment' })  } 
      decrement={ () => dispatch({ type: 'decrement' })  }
-     />
+     /> */}
+     No of Todos: {count}
 
     </div>
   );
