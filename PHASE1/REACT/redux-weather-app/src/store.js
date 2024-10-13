@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import {thunk} from 'redux-thunk';
 import weatherReducer from './reducers/reducers'; // Import the reducer
 
 // Create the store with middleware

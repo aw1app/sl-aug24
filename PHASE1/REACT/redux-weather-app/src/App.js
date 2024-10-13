@@ -1,8 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import store from './store';
 import WeatherForm from './components/WeatherForm';
 import Weather from './components/Weather';
+
+import {useSelector, useDispatch, Provider } from 'react-redux';
+import { fetchWeather } from './reducers/actions';
 
 function App() {
 
