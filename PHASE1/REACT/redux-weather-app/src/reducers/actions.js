@@ -1,7 +1,7 @@
 // actions.js
-export const FETCH_DATA_REQUEST = 'FETCH_DATA_REQUEST';
-export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
-export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
+export const FETCH_WEATHER_REQUEST = 'FETCH_WEATHER_REQUEST';
+export const FETCH_WEATHER_SUCCESS = 'FETCH_WEATHER_SUCCESS';
+export const FETCH_WEATHER_FAILURE = 'FETCH_WEATHER_FAILURE';
 
 
 export const fetchDataRequest = () => {
