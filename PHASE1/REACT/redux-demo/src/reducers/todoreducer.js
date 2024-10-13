@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { countReducer } from "../mystore";
 
 const initialState = [{"id":1,"text":"Buy Groceries"}, {"id":2,"text":"Bring Kids from School"}];
 
@@ -18,7 +19,8 @@ const todoReducer = (state = initialState, action) => {
 
 
 const rootReducer = combineReducers({
-    todoR: todoReducer
+    todoR: todoReducer,
+    countR: countReducer
 });
 
 export default rootReducer;

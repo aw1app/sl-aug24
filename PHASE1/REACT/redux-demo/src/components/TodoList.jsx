@@ -9,7 +9,7 @@ function TodoList({ todos, removeTodo }) {
 
                 <li key={todo.id}>
                     {todo.text}
-                    <button onClick={() => removeTodo(todo.id)}> [ X ]</button>
+                    <button onClick={() => removeTodo(todo.id)}>  REMOVE </button>
                 </li>
             ))}
         </ul>

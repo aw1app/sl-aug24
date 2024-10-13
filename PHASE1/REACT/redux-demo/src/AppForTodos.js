@@ -2,6 +2,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
+import Counter from './components/Counter';
 
 function AppForTodos() {
 
@@ -13,6 +14,8 @@ function AppForTodos() {
 
   const addTodo = (todoObj) => dispatch ( {type:'ADD_TODO', payload: todoObj } );
 
+  const count = useSelector(state => state.countR.count);
+
   return (
     
     <div className="App">
@@ -22,6 +25,12 @@ function AppForTodos() {
        <br/>
        <p>Add a new Todo here:</p>
        <AddTodoForm addTodo={addTodo} />
+
+      <br/><br/>
+      <Counter count={count} 
+     increment={ () => dispatch({ type: 'increment' })  } 
+     decrement={ () => dispatch({ type: 'decrement' })  }
+     />
 
     </div>
   );
