@@ -1,14 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
 import store from './store';
+import WeatherForm from './components/WeatherForm';
+import Weather from './components/Weather';
 
 function App() {
+
+  const dispatch = useDispatch();
+  
+  const weatherData = useSelector((state) => state.weatherData);
+  const loading = useSelector((state) => state.loading);
+  const error = useSelector((state) => state.error);
+
+  const handleSubmit = (city) => {
+    dispatch(fetchWeather(city));  // Dispatch the fetchWeather action
+  };
+
   return (
+    <Provider store={store}>
+    
     <div className="App">
-       <Provider store={store}>
+      <h1>Weather App</h1>
+
+      <WeatherForm onSubmit={handleSubmit} />  
+
+      <Weather loading={loading} weatherData={weatherData} error={error} /> 
         
-       </Provider>
+      
     </div>
+
+    </Provider>
   );
 }
 
