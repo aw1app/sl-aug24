@@ -8,7 +8,7 @@ function AppForTodos() {
 
   const dispatch = useDispatch();
 
-  const removeTodo = (id) => dispatch ( {type:'REMOVE_TODO', payload: id } )
+  const removeTodo = (id) => dispatch ( {type:'REMOVE_TODO', payload: id } );
 
   return (
     
