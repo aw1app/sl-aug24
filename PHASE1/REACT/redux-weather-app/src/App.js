@@ -18,8 +18,7 @@ function App() {
     dispatch(fetchWeather(city));  // Dispatch the fetchWeather action
   };
 
-  return (
-    <Provider store={store}>
+  return (   
     
     <div className="App">
       <h1>Weather App</h1>
@@ -31,7 +30,7 @@ function App() {
       
     </div>
 
-    </Provider>
+   
   );
 }
 
