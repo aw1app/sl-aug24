@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 import { countReducer } from "../mystore";
 
-const initialState = [{"id":1,"text":"Buy Groceries"}, {"id":2,"text":"Bring Kids from School"}];
+const initialTodos = [];
 
-const todoReducer = (state = initialState, action) => {
+const todoReducer = (state = initialTodos, action) => {
 
     switch (action.type) {
         case 'ADD_TODO':

@@ -8,7 +8,7 @@ function TodoList({ todos, removeTodo }) {
             { todos && todos.map(todo => (
 
                 <li key={todo.id}>
-                    {todo.text}
+                     {todo.text}
                     <button onClick={() => removeTodo(todo.id)}>  REMOVE </button>
                 </li>
             ))}
