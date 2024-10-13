@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-initialState = [{"id":1,"text":"Buy Groceries"}, {"id":2,"text":"Bring Kids from School"}];
+const initialState = [{"id":1,"text":"Buy Groceries"}, {"id":2,"text":"Bring Kids from School"}];
 
 const todoReducer = (state = initialState, action) => {
 
