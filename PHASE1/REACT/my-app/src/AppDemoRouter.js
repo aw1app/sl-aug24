@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useParams } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
 
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
 const AppDemoRouter = () => {
   const [products, setProducts] = useState([]);
 
@@ -100,7 +103,7 @@ const ProductList = ({ products }) => {
 
 //ProductForm for creating a new product 
 // Best is to create the below in a file ProductForm.js
-
+/*
 const ProductForm = () => {
   const [product, setProduct] = useState({
     id: '',
@@ -228,5 +231,127 @@ const ProductForm = () => {
     </div>
   );
 };
+*/
+
+/*Formik Based forms */
+
+
+// Validation Schema using Yup
+const validationSchema = Yup.object({
+  id: Yup.number().required('ID is required').positive('ID must be positive'),
+  name: Yup.string().required('Product name is required'),
+  price: Yup.number().required('Price is required').positive('Price must be positive'),
+  description: Yup.string(),
+  imagePath: Yup.string(),
+  inStock: Yup.boolean()
+});
+
+const ProductForm = () => {
+  const initialValues = {
+    id: '',
+    name: '',
+    price: '',
+    description: '',
+    imagePath: '',
+    inStock: true
+  };
+
+  const handleSubmit = (values, { resetForm }) => {
+    fetch('http://localhost:5000/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Product created:', data);
+        resetForm(); // Reset form after successful submission
+      })
+      .catch((error) => console.error('Error creating product:', error));
+  };
+
+  return (
+    <div className="container mt-4">
+      <h2>Create Product</h2>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ values, handleChange, handleSubmit }) => (
+          <Form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="id" className="form-label">ID:</label>
+              <Field
+                type="number"
+                name="id"
+                className="form-control"
+              />
+              <ErrorMessage name="id" component="div" className="text-danger" />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">Name:</label>
+              <Field
+                type="text"
+                name="name"
+                className="form-control"
+              />
+              <ErrorMessage name="name" component="div" className="text-danger" />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="price" className="form-label">Price:</label>
+              <Field
+                type="number"
+                name="price"
+                className="form-control"
+              />
+              <ErrorMessage name="price" component="div" className="text-danger" />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="description" className="form-label">Description:</label>
+              <Field
+                as="textarea"
+                name="description"
+                className="form-control"
+              />
+              <ErrorMessage name="description" component="div" className="text-danger" />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="imagePath" className="form-label">Image Path:</label>
+              <Field
+                type="text"
+                name="imagePath"
+                className="form-control"
+              />
+              <ErrorMessage name="imagePath" component="div" className="text-danger" />
+            </div>
+
+            <div className="form-check mb-3">
+              <Field
+                type="checkbox"
+                name="inStock"
+                className="form-check-input"
+                checked={values.inStock}
+                onChange={handleChange}
+              />
+              <label className="form-check-label" htmlFor="inStock">
+                In Stock
+              </label>
+            </div>
+
+            <button type="submit" className="btn btn-primary">Create Product</button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+};
+
 
 export default AppDemoRouter;
