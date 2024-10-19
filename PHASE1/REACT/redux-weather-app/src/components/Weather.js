@@ -17,6 +17,7 @@ function Weather({ loading, weatherData, error }) {
 
   return (
     <div>
+       {/* {weatherData && weatherData.map ( item => <li> {item.title} </li> )} */}
       <h2>{name}</h2>
       <p>Current temperature: {main.temp}°F</p>
       <p>Feels like: {main.feels_like}°F</p>

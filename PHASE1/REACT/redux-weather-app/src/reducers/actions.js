@@ -6,6 +6,7 @@ export const FETCH_WEATHER_SUCCESS = 'FETCH_WEATHER_SUCCESS';
 export const FETCH_WEATHER_FAILURE = 'FETCH_WEATHER_FAILURE';
 
 
+
 export const fetchWeather = (city) => {
     return async (dispatch) => {
         
@@ -19,5 +20,27 @@ export const fetchWeather = (city) => {
         }
     };
 };
+
+
+// export const fetchWeather = (movieWord) => {
+//     return async (dispatch) => {
+        
+//         dispatch({ type: FETCH_WEATHER_REQUEST }); // Dispatch request action
+
+//         let url="http://localhost:5000/movies";
+
+//         try {
+//             const response = await axios.get(url);
+
+//             let searchedMovies = [];
+//             if(response.data)
+//                 searchedMovies=    response.data.filter ( item => item.title.indexOf(movieWord) !== -1)
+
+//             dispatch({ type: FETCH_WEATHER_SUCCESS, payload: searchedMovies }); // Dispatch success action with data
+//         } catch (error) {
+//             dispatch({ type: FETCH_WEATHER_FAILURE, payload: error.message }); // Dispatch failure action with error message
+//         }
+//     };
+// };
 
 

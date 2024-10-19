@@ -1,0 +1,24 @@
+{
+
+"movies":[
+
+    {
+        "title":"ABC",
+        "genre":"thriller",
+        "rating":2
+    },
+    {
+        "title":"XYZ",
+        "genre":"suspense",
+        "rating":4
+    },
+    {
+        "title":"ABC 2",
+        "genre":"suspense",
+        "rating":4
+    }
+
+]
+
+
+}
