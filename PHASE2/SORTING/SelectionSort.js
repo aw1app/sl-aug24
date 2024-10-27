@@ -17,7 +17,7 @@ function selectionSort(array) {
 
 }
 
-const unsortedArray = [5, 2, 4, 1, 3]; 
+const unsortedArray = [5, 2, 4,17, 1, 3]; 
 console.log("Before Sorting");
 console.log(unsortedArray);
 selectionSort(unsortedArray);
