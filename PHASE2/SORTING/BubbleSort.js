@@ -12,7 +12,6 @@ function bubbleSort(array) {
 
     }
 
-
 }
 
 
