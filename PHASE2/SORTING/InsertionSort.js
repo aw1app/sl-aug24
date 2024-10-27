@@ -4,7 +4,6 @@ function insertionSort(array) {
 
     for (let i = 0; i <n ; i++) {
 
-
         let currentValue = array[i]; 
       
         let j = i - 1; 
