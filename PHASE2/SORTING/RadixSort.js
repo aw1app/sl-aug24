@@ -1,6 +1,9 @@
 function radixSort(arr) {
     const result = [...arr];
     const radixArray = Array.from({ length: 10 }, () => []);
+
+    //console.log(radixArray);
+
     const maxVal = Math.max(...result);
     let exp = 1;
 
@@ -11,6 +14,7 @@ function radixSort(arr) {
             const radixIndex = Math.floor((val / exp) % 10);
             radixArray[radixIndex].push(val);
         }
+        //console.log(radixArray);
 
         // Clear result array
         result.length = 0;
