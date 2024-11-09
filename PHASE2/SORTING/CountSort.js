@@ -4,7 +4,7 @@ function countingSort(arr) {
     const maxVal = Math.max(...arr);
     const count = new Array(maxVal + 1).fill(0);
 
-    // Count occurrences
+    // Build the frequency array 
     for (const num of arr) {
         count[num] += 1;
     }
