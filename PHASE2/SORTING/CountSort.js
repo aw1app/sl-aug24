@@ -9,6 +9,8 @@ function countingSort(arr) {
         count[num] += 1;
     }
 
+    //console.log(count)
+
     // Build sorted array
     for (let i = 0; i < count.length; i++) {
         while (count[i] > 0) {
