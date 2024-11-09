@@ -16,7 +16,6 @@ function jumpSearch(arr, x) {
         }
     }
 
-
     // Perform linear search within the found block 
     for (let i = left; i <= right; i++) {
         if (arr[i] === x) {
