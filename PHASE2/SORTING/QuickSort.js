@@ -24,7 +24,7 @@ function partition(array, low, high) {
     }
 
     [array[i+1], array[high]] = [array[high], array[i+1]]; // One last swap  
-    return i+1;
+    return i+1;// return the pivot index
 }
 
 
