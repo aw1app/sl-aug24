@@ -1,5 +1,4 @@
 function mergeSort(array) {
-
     // Base case: 
     if (array.length <= 1) return array;
 
@@ -14,32 +13,30 @@ function mergeSort(array) {
     const sortedLeft = mergeSort(leftHalf);
     const sortedRight = mergeSort(rightHalf);
 
-    return merge(sortedLeft,sortedRight);
-
+    return merge(sortedLeft, sortedRight);
 }
 
-function merge( leftArray, rightArray) {
-    const mergedArray = []; 
-    let leftIndex = 0; 
-    let rightIndex = 0; 
+function merge(leftArray, rightArray) {
+    const mergedArray = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
 
     // Merge the two sorted arrays 
-    while (leftIndex < leftArray.length && rightIndex < rightArray.length) { 
-        if (leftArray[leftIndex] <= rightArray[rightIndex]) { 
+    while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+        if (leftArray[leftIndex] <= rightArray[rightIndex]) {
             mergedArray.push(leftArray[leftIndex]);
             leftIndex++;
-        }else{
-            mergedArray.push(rightArray[rightIndex]); 
+        } else {
+            mergedArray.push(rightArray[rightIndex]);
             rightIndex++
         }
     }
 
     // if there are any remaining elements in either of the array
-    return mergedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));  
-
+    return mergedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 }
 
-const unsortedArray = [5, 2, 4,17, 1, 3]; 
+const unsortedArray = [5, 2, 4, 17, 23, 1, 3];
 console.log("Before Sorting");
 console.log(unsortedArray);
 sortedArray = mergeSort(unsortedArray);
