@@ -47,8 +47,7 @@ class SinglyLinkedList{
         } 
 
         //if we are here then the position was not in the range of list. 
-        console.log("Position not found. No update done!"); 
-
+        console.log("Position not found. No update done!");
     }
 
      // Delete: Remove a node from the list at a specified position 
