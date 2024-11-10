@@ -44,7 +44,6 @@ class DoublyLinkedList {
         let count = 0; 
 
         while(current){
-
             if (count === position) { 
                 current.data = data; 
                 return; 
