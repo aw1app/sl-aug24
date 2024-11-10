@@ -87,17 +87,17 @@ class CircularlySinglyLinkedList {
 
     // Update: Modify the value of a node at a given position 
     update(position, data) {
-        let current = this.head; 
-        let count = 0;  
+        let current = this.head;
+        let count = 0;
 
-        do  { 
-            if (count === position) { 
-                current.data = data; 
-                return; 
-            } 
-            current = current.next; 
-            count++; 
-        } while( current!== this.head )
+        do {
+            if (count === position) {
+                current.data = data;
+                return;
+            }
+            current = current.next;
+            count++;
+        } while (current !== this.head)
 
         //if we are here then the position was not in the range of list. 
         console.log("Position not found. No update done!");
