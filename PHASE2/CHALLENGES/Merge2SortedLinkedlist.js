@@ -16,23 +16,21 @@ function mergeSortedLists(l1, l2) {
     while (l1 !== null && l2 !== null) {
 
         if (l1.data < l2.data) {
-            //current.next = l1;
-            resultHead.add(l1.data);
+            current.next = l1;
             l1 = l1.next;
 
         } else {
-            //current.next = l2;
-            resultHead.add(l1.data);
+            current.next = l2;
             l2 = l2.next;
         }
-        //current = current.next;
+        current = current.next;
     }
 
      // At least one of l1 and l2 can still have nodes at this point, so connect 
     // the non-null list to the end of the merged list.
-    //current.next = l1 === null ? l2 : l1;
+    current.next = l1 === null ? l2 : l1;
 
-    return resultHead;
+    return resultHead.next;
 }
 
 // The LL definition
@@ -136,6 +134,8 @@ list2.add(33);
 console.log("Displayingh List 2");
 list2.display();
 
-let mergedList = mergeSortedLists(list1.head,list2.head);
+let mergedNode = mergeSortedLists(list1.head,list2.head);
 console.log("Displayingh mergedList ");
-mergedList.display();
+const mergedlist = new SinglyLinkedList();
+mergedlist.head = mergedNode;
+mergedlist.display();
