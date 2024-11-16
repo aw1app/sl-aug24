@@ -11,7 +11,7 @@ function radixSort(arr) {
         // Distribute numbers to buckets
         for (let i = result.length - 1; i >= 0; i--) {
             const val = result[i];
-            const radixIndex = Math.floor((val / exp) % 10);
+            const radixIndex = Math.floor((val / exp) % 10); 
             radixArray[radixIndex].push(val);
         }
         //console.log(radixArray);
