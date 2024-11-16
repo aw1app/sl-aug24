@@ -57,8 +57,21 @@ class BinaryTree {
         } else {
             return this.search(data, node.right);
         }
-
     }
+
+
+    // Function to find the minimum value in the binary tree 
+    findMin(node = this.root) {
+        if (!node) {
+            return null;
+        }
+
+        while (node.left) {
+            node = node.left;
+        }
+        return node.data;
+    }
+
 
     // Function to perform an in-order traversal of the binary tree 
     inOrderTraversal(node, result = []) {
@@ -81,7 +94,7 @@ tree.insert(15);
 tree.insert(3);
 tree.insert(8);
 
-console.log('In-order traversal:', tree.inOrderTraversal(tree.root)); 
+console.log('In-order traversal:', tree.inOrderTraversal(tree.root));
 
-console.log('Search 11 in tree:', tree.search(11) );
-console.log('Search 15 in tree:', tree.search(15) );
+console.log('Search 11 in tree:', tree.search(11));
+console.log('Search 15 in tree:', tree.search(15));
