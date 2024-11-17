@@ -115,6 +115,7 @@ class AVLTree {
         if (node) {
             this.inOrderTraversal(node.left, result);
             result.push(node.data);
+            console.log(node.data, this.getBalanceFactor(node));
             this.inOrderTraversal(node.right, result);
         }
         return result;
