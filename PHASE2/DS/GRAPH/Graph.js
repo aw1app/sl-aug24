@@ -57,10 +57,13 @@ graph.addEdge('A', 'B');
 graph.addVertex('D'); 
 graph.addEdge('B', 'D'); 
 graph.addEdge('B', 'C'); 
+
+graph.addVertex('Z'); 
+graph.addEdge('A', 'Z'); 
  
 console.log('Graph representation:'); 
 graph.printGraph(); 
 
 // DFS traversal
 console.log("DFS Traversal ")
-graph.dfs('A');
+graph.dfs('B');
