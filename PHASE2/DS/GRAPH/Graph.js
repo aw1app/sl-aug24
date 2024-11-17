@@ -60,6 +60,8 @@ graph.addEdge('B', 'C');
 
 graph.addVertex('Z'); 
 graph.addEdge('A', 'Z'); 
+
+graph.addVertex('Y'); 
  
 console.log('Graph representation:'); 
 graph.printGraph(); 
@@ -67,3 +69,5 @@ graph.printGraph();
 // DFS traversal
 console.log("DFS Traversal ")
 graph.dfs('B');
+
+console.log("All in the adjacency list", graph.adjacencyList.entries());
