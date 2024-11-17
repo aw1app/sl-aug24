@@ -95,6 +95,8 @@ tree.insert(15);
 tree.insert(3);
 tree.insert(8);
 
+
+
 console.log('In-order traversal:', tree.inOrderTraversal(tree.root));
 
 console.log('Search 11 in tree:', tree.search(11));
