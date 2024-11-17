@@ -82,8 +82,7 @@ class AVLTree {
  
         // Get the balance factor to check if the node became unbalanced 
         const balance = this.getBalanceFactor(node); 
- 
- 
+  
         // Left Left Case 
         if (balance > 1 && data < node.left.data) { 
             return this.rotateRight(node); 
