@@ -8,7 +8,7 @@ public class AirHostess {
 	int age;
 	String[] services = null;
 
-	AirHostess(String name, int age, String[] srvs) {
+	public AirHostess(String name, int age, String[] srvs) {
 //		this.name = name;
 //		this.age = age;
 		this(name,age);
@@ -16,7 +16,7 @@ public class AirHostess {
 	}
 	
 	// Overloaded constructors
-	AirHostess(String name, int age) {
+	public AirHostess(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}

@@ -3,7 +3,7 @@ package airline.staff;
 public class Pilot {
 	
 	// Data or Fields or properties 
-	String name;
+	public String name;
 	int age;
 
 	String from_dest;
@@ -14,12 +14,12 @@ public class Pilot {
 	
 	//Constructors
 	//Default constructor
-	Pilot(){
+	public Pilot(){
 		System.out.println(" default constructor called ..");
 	}
 	
 	//custom constructors
-	Pilot(String name, int age, int liceNo){
+	public Pilot(String name, int age, int liceNo){
 		System.out.println(" custom constructor called ..");
 		this.name =  name;
 		this.age =  age;
@@ -35,7 +35,7 @@ public class Pilot {
 		
 	}
 
-	void displayDetails() {
+	public void displayDetails() {
 		System.out.println("Name :"+ name + "; Age :"+ this.age +  "; Licence No :"+ this.licenseNo );
 	}
 

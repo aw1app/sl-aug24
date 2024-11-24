@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+import airline.materials.Ticket;
+import airline.staff.AirHostess;
+import airline.staff.Pilot;
+
 public class AirlineMain {
 
 	public static void main(String[] args) {
@@ -39,6 +43,8 @@ public class AirlineMain {
 		String[] services2 = {"Food Service", "Blanklet Service", "Safety Demonstration"};
 		airHostess2.setServices(services2);
 		airHostess2.displayDetails();
+		
+		Ticket t1= new Ticket(null, 0);
 		
 	}
 
