@@ -1,3 +1,5 @@
+package airline.staff;
+
 import java.util.Arrays;
 
 public class AirHostess {
@@ -7,8 +9,9 @@ public class AirHostess {
 	String[] services = null;
 
 	AirHostess(String name, int age, String[] srvs) {
-		this.name = name;
-		this.age = age;
+//		this.name = name;
+//		this.age = age;
+		this(name,age);
 		this.services = srvs;
 	}
 	
