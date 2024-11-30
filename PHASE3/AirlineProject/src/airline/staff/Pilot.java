@@ -4,12 +4,14 @@ public class Pilot {
 	
 	// Data or Fields or properties 
 	public String name;
-	int age;
+	protected int age;
+	
+	public int x = 10;
 
 	String from_dest;
 	String to_dest;
 	
-	int licenseNo = 123456;
+	protected int licenseNo = 123456;
 	
 	
 	//Constructors
@@ -30,13 +32,13 @@ public class Pilot {
 	void flies(String from, String to){
 		
 	}
-	
+	 	
 	void landSafely(){
 		
 	}
 
 	public void displayDetails() {
-		System.out.println("Name :"+ name + "; Age :"+ this.age +  "; Licence No :"+ this.licenseNo );
+		System.out.println("[Regular Employee Pilot ] " + "Name :"+ name + "; Age :"+ this.age +  "; Licence No :"+ this.licenseNo );
 	}
 
 }
