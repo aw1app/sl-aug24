@@ -15,10 +15,10 @@ public abstract class HourlyRatePilot extends Pilot{
 		System.out.println("[ x = ] " + this.x);
 	}
 	
-	// we don't what to code in the body
+	//Reason 1 to create an abstract method:  we don't know what to code in the body
 	abstract public void setContractTerms();
 	
-	// Force sub class to provide the implementation
+	////Reason 2 to create an abstract method: Force sub classes to provide the implementation
 	abstract public void verifyIdentity();
 	
 
