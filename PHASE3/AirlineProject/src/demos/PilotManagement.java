@@ -11,7 +11,6 @@ public class PilotManagement {
 		System.out.println(" ** PILOT MANANGEMENT SYSTEM **\n\n ");
 
 		Scanner scanner = new Scanner(System.in);
-		Pilot[] pilots = new Pilot[4];
 
 		// Create n pilots
 		System.out.println(" How many pilots ");
