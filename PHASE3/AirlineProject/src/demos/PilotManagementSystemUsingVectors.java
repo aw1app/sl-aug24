@@ -5,7 +5,7 @@ import java.util.Vector;
 
 import airline.staff.Pilot;
 
-public class PilotManagementSystemV2 {
+public class PilotManagementSystemUsingVectors {
 
 	public static void main(String[] args) {
 		System.out.println(" ** PILOT MANANGEMENT SYSTEM **\n\n ");
@@ -45,6 +45,10 @@ public class PilotManagementSystemV2 {
 
 		System.out.println("Eldest Pilot is " + pilots.get(indexOfMaxAge).name + " and his/her age is "
 				+ pilots.get(indexOfMaxAge).getAge());
+		
+		
+		// Remove pilot at index 1
+		//pilots.remove(1);
 		
 		
 		scanner.close();
