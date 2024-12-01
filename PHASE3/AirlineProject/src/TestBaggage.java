@@ -19,7 +19,7 @@ public class TestBaggage {
 		xray.checkBaggage(v1);
 		
 //		AirHostess ah1 = new AirHostess("Mala" , 50);
-//		xray.checkBaggage(ah1);
+//		xray.checkBaggage(ah1); // compile error
 
 	}
 
