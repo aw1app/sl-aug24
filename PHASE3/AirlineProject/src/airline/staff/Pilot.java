@@ -1,5 +1,7 @@
 package airline.staff;
 
+import airline.materials.Address;
+
 public class Pilot {
 	
 	// Data or Fields or properties 
@@ -12,6 +14,8 @@ public class Pilot {
 	String to_dest;
 	
 	protected int licenseNo = 123456;
+	
+	Address addr;
 	
 	
 	//Constructors
@@ -26,6 +30,14 @@ public class Pilot {
 		this.name =  name;
 		this.age =  age;
 		this.licenseNo =  liceNo;
+	}
+	
+	public Pilot(String name, int age, int liceNo, Address addr){
+		System.out.println(" custom constructor called ..");
+		this.name =  name;
+		this.age =  age;
+		this.licenseNo =  liceNo;
+		this.addr= addr;
 	}
 	
 	// Methods or Operations or Actions or functions
