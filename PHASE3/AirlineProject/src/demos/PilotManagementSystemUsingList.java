@@ -68,3 +68,6 @@ public class PilotManagementSystemUsingList {
 	}
 
 }
+
+// Challenge : Add a property salary. 
+// Enhance the above program to display the lowest salary pilot's name.
