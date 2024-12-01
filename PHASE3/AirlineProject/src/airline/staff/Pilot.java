@@ -52,5 +52,9 @@ public class Pilot {
 	public void displayDetails() {
 		System.out.println("[Regular Employee Pilot ] " + "Name :"+ name + "; Age :"+ this.age +  "; Licence No :"+ this.licenseNo );
 	}
+	
+	public int getAge() {
+		return this.age;
+	}
 
 }
