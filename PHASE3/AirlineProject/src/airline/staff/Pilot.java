@@ -56,5 +56,9 @@ public class Pilot {
 	public int getAge() {
 		return this.age;
 	}
+	
+	public int getLicenseNo() {
+		return licenseNo;
+	}
 
 }

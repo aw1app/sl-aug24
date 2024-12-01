@@ -13,8 +13,12 @@ public class PilotManagement {
 		Scanner scanner = new Scanner(System.in);
 		Pilot[] pilots = new Pilot[4];
 
-		// Create 4 pilots
-		for (int i = 0; i < 4; i++) {
+		// Create n pilots
+		System.out.println(" How many pilots ");
+		int noOfPilots = scanner.nextInt();
+		Pilot[] pilots = new Pilot[noOfPilots];
+		
+		for (int i = 0; i < pilots.length; i++) {
 
 			System.out.println(" Enter Pilot " + (i + 1) + "'s name  ");
 			String name = scanner.next();
@@ -35,7 +39,7 @@ public class PilotManagement {
 		// Let's use Linear search
 		int indexOfMaxAge = 0;
 
-		for (int i = 1; i < 4; i++) {
+		for (int i = 1; i < pilots.length; i++) {
 			if (pilots[i].getAge() > pilots[indexOfMaxAge].getAge())
 				indexOfMaxAge = i;
 		}
@@ -43,12 +47,17 @@ public class PilotManagement {
 
 		System.out.println("Eldest Pilot is " + pilots[indexOfMaxAge].name + " and his/her age is "
 				+ pilots[indexOfMaxAge].getAge());
-		
+
 		System.out.println(" \n\n --- PILOT check --- ");
 		System.out.println(" Enter the license number of pilot you want to search:");
-		int tempLicenseNo = scanner.nextInt();
 		
+
 		
+		int lno = scanner.nextInt();
+		for (int i = 1; i < pilots.length; i++) {
+			if (pilots[i].getLicenseNo() == lno)
+				System.out.println("found the pilot" + " name is" + pilots[i].name);
+		}
 
 	}
 
