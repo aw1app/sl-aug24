@@ -43,6 +43,12 @@ public class PilotManagement {
 
 		System.out.println("Eldest Pilot is " + pilots[indexOfMaxAge].name + " and his/her age is "
 				+ pilots[indexOfMaxAge].getAge());
+		
+		System.out.println(" PILOT check ");
+		System.out.println(" Enter the license number of pilot you want to search:");
+		int tempLicenseNo = scanner.nextInt();
+		
+		
 
 	}
 
