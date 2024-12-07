@@ -2,16 +2,44 @@ package demos;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
+import airline.staff.AirHostess;
 import airline.staff.Pilot;
 
-public class PilotManagementSystemUsingList {
-
+public class PilotManagementSystemUsingCollections {
+	
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		//listDemo(scanner);
+		
+		priorityQueueDemo(scanner);
+		
+		scanner.close();
+	}
+	
+	public static void priorityQueueDemo(Scanner scanner) {
+		
+		PriorityQueue<Integer>	priorityQueue = new PriorityQueue<Integer>(); // FIFO
+		
+		priorityQueue.add(1);
+		priorityQueue.add(11);
+		priorityQueue.add(7);
+		priorityQueue.add(4);
+		
+		Integer i1 = priorityQueue.peek(); // priorityQueue.poll();
+		
+		System.out.println("i1="+i1);
+		System.out.println("priorityQueue.size() = "+ priorityQueue.size());
+		
+	}
+
+	public static void listDemo(Scanner scanner) {
 		System.out.println(" ** PILOT MANANGEMENT SYSTEM **\n\n ");
 
-		Scanner scanner = new Scanner(System.in);
+		
 
 		// Create n pilots
 		System.out.println(" How many pilots ");
@@ -34,6 +62,8 @@ public class PilotManagementSystemUsingList {
 			pilots.add(new Pilot(name, age, lNo));
 
 		}
+		
+	
 
 		// Search for the most aged pilot.
 		// Let's use Linear search
@@ -63,7 +93,16 @@ public class PilotManagementSystemUsingList {
 		System.out.println("After sorting Eldest Pilot is " + pilots.getLast().name + " and his/her age is "
 				+ pilots.getLast().getAge());
 		
-		scanner.close();
+		
+		// Another simplified for loop
+		pilots.forEach(
+				
+				p -> {System.out.println(p.name);System.out.println(p.getAge()) ;}
+				
+				);
+		
+		
+		
 
 	}
 
