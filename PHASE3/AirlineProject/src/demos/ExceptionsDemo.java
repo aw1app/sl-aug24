@@ -10,13 +10,26 @@ import airline.staff.Pilot;
 public class ExceptionsDemo {
 	
 	public static void main(String[] args) {
+		FileWriter f = null;
 		
 		try {
-			FileWriter f = new FileWriter("F:\\Users\\home\\git\\sl-aug24\\PHASE3\\AirlineProject\\src\\a.txt");
+			 f = new FileWriter("F:\\Users\\home\\git\\sl-aug24\\PHASE3\\AirlineProject\\src\\a.txt");
+			 f.write("World");
 		} catch (IOException e) {
 			
 			//
+		}finally {
+			// use this finally block to do some clean up work
+			try {
+				f.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		
+		
+		
 		
 		
 	}
@@ -51,8 +64,11 @@ public class ExceptionsDemo {
 			//
 		}catch(Exception ex){
 			//
+		}finally {
+			// use this finally block to do some clean up work
 		}
 
+		//NOTE: When a try block can  multiple 
 		
 		System.out.println("Thank you for using this pilot creation app.)");
 
