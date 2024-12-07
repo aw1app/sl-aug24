@@ -29,10 +29,22 @@ public class PilotManagementSystemUsingCollections {
 		priorityQueue.add(7);
 		priorityQueue.add(4);
 		
+		//Iteration
+		priorityQueue.forEach(
+				
+				p -> {System.out.println(p);}
+				
+				);
+		
 		Integer i1 = priorityQueue.peek(); // priorityQueue.poll();
+		
 		
 		System.out.println("i1="+i1);
 		System.out.println("priorityQueue.size() = "+ priorityQueue.size());
+		
+//		Challenge: 
+//			Create a PriorityQueue of Pilot objects
+//			such that when we poll(), we should get the Eldest Pilot.
 		
 	}
 
