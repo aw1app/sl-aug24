@@ -3,6 +3,7 @@ package demos;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -29,7 +30,7 @@ public class PilotManagementSystemUsingCollections {
 		System.out.println(" How many pilots ");
 		int noOfPilots = scanner.nextInt();
 
-		HashMap<Integer, Pilot> mapOfLNToPilot = new HashMap<Integer, Pilot>();
+		Map<Integer, Pilot> mapOfLNToPilot = new HashMap<Integer, Pilot>();
 
 		for (int i = 0; i < noOfPilots; i++) {
 
