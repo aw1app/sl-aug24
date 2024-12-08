@@ -14,8 +14,9 @@ public class MultiThreadingDemo {
 		t2.setName("NP2");
 		t2.start();
 		
-		Runnable r1 = new NumberProducingThreadUsingRunnable("R1");
+		Runnable r1 = new NumberProducingThreadUsingRunnable();
 		Thread tr1 = new Thread(r1);
+		tr1.setName("R1");
 		tr1.start();
 		
 		
