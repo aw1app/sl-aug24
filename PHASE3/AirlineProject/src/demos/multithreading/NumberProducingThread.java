@@ -1,4 +1,4 @@
-package demos;
+package demos.multithreading;
 
 public class NumberProducingThread extends Thread{
 	
