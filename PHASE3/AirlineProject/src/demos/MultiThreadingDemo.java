@@ -21,8 +21,14 @@ public class MultiThreadingDemo {
 		
 		System.out.println("Main stmt 3");
 		
-		for(int i=0;i<1000;i++)
+		for(int i=0;i<1000;i++) {
 		System.out.println("Main stmt 4 M "+i);
+		try {
+			Thread.sleep(100);// sleep for 100 ms
+		} catch (InterruptedException e) {				
+			e.printStackTrace();
+		}
+		}
 		
 		
 		
