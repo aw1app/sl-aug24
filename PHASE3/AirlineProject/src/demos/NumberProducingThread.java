@@ -6,9 +6,13 @@ public class NumberProducingThread extends Thread{
 	public void run() {
 		
 		for(int i=0;i<100;i++) {
-			System.out.println("[NumberProducingThread] i = "+i);
+			System.out.println(this.getName() + " i = "+i);
 		}
 		
+	}
+	
+	public int m1() {
+		return 5;
 	}
 
 }
