@@ -2,9 +2,8 @@ package demos;
 
 public class Plate {
 
-	int number;
 
-	public  void addItem(String item) {		
+	public synchronized void addItem(String item) {		
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println("added a " + item + " to the plate.");
