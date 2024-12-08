@@ -6,13 +6,17 @@ public class MultiThreadingDemo {
 		System.out.println("Main stmt 1");
 		System.out.println("Main stmt 2");
 		
-		NumberProducingThread t1 = new NumberProducingThread();
+		Thread t1 = new NumberProducingThread();
 		t1.setName("NP1");
 		t1.start();
 		
-		NumberProducingThread t2 = new NumberProducingThread();
+		Thread t2 = new NumberProducingThread();
 		t2.setName("NP2");
 		t2.start();
+		
+		Runnable r1 = new NumberProducingThreadUsingRunnable("R1");
+		Thread tr1 = new Thread(r1);
+		tr1.start();
 		
 		
 		System.out.println("Main stmt 3");
