@@ -72,6 +72,16 @@ public class StreamsDemo {
                 .findFirst();
         if(firstFurniture.isPresent())
         System.out.println("\n5. First Furniture Product name is : "+firstFurniture.get().getName());
+        
+        products.stream().count(); // 6
+        products.stream().filter(p -> p.getCategory().equals("Furniture")).count(); // 2
+        
+        // Challenge: How will you find the max priced furniture?
+        double  maxPricedFurniture = products.stream().filter(p -> p.getCategory().equals("Furniture"))
+        		. mapToDouble(Product::getPrice)
+        		.summaryStatistics().getMax();
+        System.out.println("\n6. Max Priced Furniture : "+maxPricedFurniture);
+
 	}
 
 }
