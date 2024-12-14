@@ -26,6 +26,7 @@ public class JDBCDemo {
 
 			ResultSet rs = stmt.executeQuery("SELECT * FROM estore.products");
 
+			//Iterate the rows
 			while (rs.next()) {
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
