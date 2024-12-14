@@ -28,7 +28,7 @@ public class CallableStatementDemo {
 
 			stmt.execute();
 			
-			int count = stmt.getInt(2);
+			int count = stmt.getInt(2); // Fetch the result of calling the SP.
 			
 			System.out.println(" No of products of Electronics category is " + count);
 
