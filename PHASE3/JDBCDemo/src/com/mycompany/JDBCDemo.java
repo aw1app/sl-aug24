@@ -8,9 +8,42 @@ import java.sql.Statement;
 
 public class JDBCDemo {
 	
+	// Update Demo
+			public static void main(String[] args) {
+
+				// Step1 : Load the driver.
+				// Above step is not needed for our Java versions
+				Connection connection = null;
+				try {
+					// Step 2: Create a Connection object.
+					connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/estore", "root", "rootroot");
+
+					// Step 3: Create a Statement object.
+
+					Statement stmt = connection.createStatement();
+
+					// Step 4: Execute the SQL command.
+					
+					String sql = "UPDATE products set price=1500 where name='Apple Watch  3'";
+
+					int rowCount = stmt.executeUpdate(sql);
+					
+					System.out.println("Successfully upadted " + rowCount +  " rows");
+
+				} catch (SQLException e) {
+					System.err.println(e);
+				} finally {
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						System.err.println(e);
+					}
+				}
+
+			}
 	
 	// Insert Demo
-		public static void main(String[] args) {
+		public static void main2(String[] args) {
 
 			// Step1 : Load the driver.
 			// Above step is not needed for our Java versions
