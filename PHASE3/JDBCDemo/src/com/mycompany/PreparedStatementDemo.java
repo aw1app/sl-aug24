@@ -38,7 +38,7 @@ public class PreparedStatementDemo {
 							double price = rs.getDouble("price");
 							String category = rs.getString("category");
 
-							System.out.println("id=" + id + ", Name=" + name + ", Price=" + price + ", Category=" + category);
+							System.out.println("ID=" + id + ", Name=" + name + ", Price=" + price + ", Category=" + category);
 						}
 			
 			
