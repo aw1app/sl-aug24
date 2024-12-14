@@ -5,10 +5,48 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 
 public class CallableStatementDemo {
-
+	
 	public static void main(String[] args) {
+		updateDemo() ;
+	}
+	
+	public static void updateDemo() {
+		Connection connection = null;
+		try {
+			// Step 2: Create a Connection object.
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/estore", "root", "rootroot");
+
+			String sql = "{call GetProductCount(?,?)}";
+
+			CallableStatement stmt = connection.prepareCall(sql);
+
+			stmt.setString(1, "Electronics");
+			stmt.registerOutParameter(2, Types.INTEGER);
+
+			stmt.execute();
+			
+			int count = stmt.getInt(2);
+			
+			System.out.println(" No of products of Electronics category is " + count);
+
+			
+		} catch (SQLException e) {
+			System.err.println(e);
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				System.err.println(e);
+			}
+		}
+
+	}
+	
+
+	public static void queryDemo(String[] args) {
 		Connection connection = null;
 		try {
 			// Step 2: Create a Connection object.
