@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.util.Arrays;
 
-public class TransactionDemo {
+public class TransactionWithSavePointDemo {
 
 	public static void main(String[] args) {
 
@@ -22,43 +22,58 @@ public class TransactionDemo {
 			PreparedStatement stmt = connection.prepareStatement(insertSQL);
 			
 			stmt.setString(1, "Apple Laptop 1");
-			stmt.setDouble(2, 3000.0d);
+			stmt.setDouble(2, 300000000000.07878787878d);
 			stmt.setString(3, "Electronics");
 			
-			stmt.addBatch();		
+			System.err.println("WARNINGS: "+ stmt.getWarnings());
 			
+			stmt.executeUpdate();
+			
+			
+			//Create a SavePoint
+			savePoint1 = connection.setSavepoint("Savepoint1" );
 			
 			stmt.setString(1, "Apple Laptop 2");
 			stmt.setDouble(2, 3000.0d);
 			stmt.setString(3, "Electronics QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ");
 			
-			stmt.addBatch();
+			stmt.executeUpdate();
 			
 			
 			stmt.setString(1, "Apple Laptop 3");
 			stmt.setDouble(2, 3000.0d);
 			stmt.setString(3, "Electronics");
 			
-			stmt.addBatch();
-			
-			int[] results = stmt.executeBatch();
+			stmt.executeUpdate();			
+
 			
 			connection.commit();
 			
-			System.out.println(Arrays.toString(results));
+			
 			
 		} catch (SQLException e) {
 			System.err.println("Something went wrong!");
-			System.err.println(e);
+			System.err.println(e.getMessage());
+			System.err.println(e.getErrorCode());
+			
+			
 			
 			try {
-				
-				connection.rollback();
+				connection.rollback(savePoint1);
+				//connection.rollback();
 				System.err.println("Rollback happened!");
 			} catch (SQLException e1) {				
 				e1.printStackTrace();
 			}
 			
+		}finally {
+			try {
+				System.err.println("WARNINGS: "+ connection.getWarnings());
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
