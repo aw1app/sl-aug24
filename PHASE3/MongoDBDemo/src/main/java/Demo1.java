@@ -27,7 +27,7 @@ public class Demo1 {
 
 		createUser();
 
-		//readUsers();
+		readUsers();
 
 	}
 
