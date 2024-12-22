@@ -25,3 +25,6 @@ public class LoginServlet extends HttpServlet {
 	}
 
 }
+
+//CHALLENGE: Enhance above servlet so that it prints "You have successfully logged in" if password is "abc123"
+//otherwise print "Invalid username/password. Login again"
