@@ -18,5 +18,28 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>home.html</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>WelcomeServlet</display-name>
+    <servlet-name>WelcomeServlet</servlet-name>
+    <servlet-class>com.sl.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WelcomeServlet</servlet-name>
+    <url-pattern>/WelcomeServlet</url-pattern>
+    <url-pattern>/wel</url-pattern>
+    <url-pattern>/abc</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.sl.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
 </web-app>
