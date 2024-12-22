@@ -25,21 +25,37 @@ public class Demo1 {
 		// Connect to MongoDB
 		connectToMongoDB();
 
-		createUser();
+		//createUser();
 
 		readUsers();
+
+		
+		//updateUser();
+		
+		createUserWithSchemaValidationEnforced();
 
 	}
 
 	private static void connectToMongoDB() {
 		// Connect to local MongoDB
-		mongoClient = MongoClients.create("mongodb://localhost:27017");
+		
+		String localDBURL ="mongodb://localhost:27017";
+		String cloudAtlasURL="mongodb+srv://atrain:nLOo4TaR1HW12e9N@cluster0.ixxay.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+		
+		mongoClient = MongoClients.create(cloudAtlasURL);
 
 		// Get database and collection
 		database = mongoClient.getDatabase("mydatabase");
 		usersCollection = database.getCollection("users-sl");
 
 		System.out.println("Successfully connected to MongoDB.");
+	}
+
+	private static void createUserWithSchemaValidationEnforced() {
+		// Create multiple users
+		Document user = new Document("name", "ABC").append("age", 25).append("email", "jane@example.com");
+		usersCollection.insertOne(user);
+		System.out.println("User created successfully.");
 	}
 
 	private static void createUser() {
@@ -81,14 +97,14 @@ public class Demo1 {
 	private static void updateUser() {
 		// Update one user
 		Bson filter = Filters.eq("name", "John Doe");
-		Bson update = Updates.combine(Updates.set("age", 31), Updates.set("email", "john.doe@example.com"));
+		Bson update = Updates.combine(Updates.set("age", 31), Updates.set("email", "abc@example.com"));
 
 		usersCollection.updateOne(filter, update);
 		System.out.println("User updated successfully.");
 
 		// Update multiple users
-		Bson multiFilter = Filters.lt("age", 30);
-		Bson multiUpdate = Updates.inc("age", 1);
+		Bson multiFilter = Filters.eq("age", 35);
+		Bson multiUpdate = Updates.inc("age", 100);
 
 		usersCollection.updateMany(multiFilter, multiUpdate);
 		System.out.println("Multiple users updated successfully.");
