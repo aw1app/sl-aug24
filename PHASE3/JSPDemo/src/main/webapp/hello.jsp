@@ -63,6 +63,7 @@ for(int i=0;i<5;i++){
 <% } %>	
 
 
-
+<br><br>CHALLENGE : Create a List of 4 products. Loop through the list and print the name and price
+in a nice table.
 </body>
 </html>
