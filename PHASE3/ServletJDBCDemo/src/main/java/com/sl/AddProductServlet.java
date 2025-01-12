@@ -19,6 +19,9 @@ public class AddProductServlet extends HttpServlet {
 	Statement stmt = null;
 
 	public void init(ServletConfig config) {
+		
+		// String url =  getServletContext().getInitParameter("dburl");
+		
 		String url = config.getInitParameter("dburl");
 		String user = config.getInitParameter("dbusername");
 		String passwd = config.getInitParameter("dbpassword");
