@@ -19,30 +19,50 @@
 	int y = 200;
 	%>
 
-	<%!
-	class Product {
-	String name;
-	float price;
-	
-	Product(String name,float price){
-		this.name=name;
-		this.price=price;
-	}
-	
-	public float getPrice(){
-		return this.price;
-	}
-	
-	};
-	
-	%>
+	<%!class Product {
+String name;
+float price;
 
-<!-- Declaration Demo -->
-<%! Product p1 = new Product("HP Mouse",25.5f); %>
-<!-- Expressions Demo -->
-<br> Price of the Product of the day : <%= p1.getPrice() %>
+Product(String name, float price) {
+this.name = name;
+this.price = price;
+}
 
-CHALLENGE : Display name of the product.
+public float getProductPrice() {
+return this.price;
+}
+
+public String getProductName() {
+return this.name;
+}
+}%>
+
+<%! Product prod = new Product("HP Laptop", 155.55f);
+String prodName = prod.getProductName();
+float prodPrice = prod.getProductPrice();
+%>
+<br><br>Product Name: <%= prodName %> <br>
+<br>Product Price: <%= prodPrice %>
+
+<br><br>CHALLENGE : Display name of the product.
+
+<!-- Scriptlet Demo -->
+<br><br>
+<!-- Approach 1 -->
+<% 
+for(int i=0;i<5;i++){
+	out.println("<br>"+i*i);
+}
+%>
+
+
+<!-- Approach 2 -->
+<br><br>
+<% for(int i=0;i<5;i++){ %>	
+	<br><%= i*i %> 
+<% } %>	
+
+
 
 </body>
 </html>
