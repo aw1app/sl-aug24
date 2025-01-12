@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" import="java.util.*;java.sql.*" errorPage="e.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +18,8 @@
 	int x = 100;
 	int y = 200;
 	%>
+
+<% throw new Exception();  %>
 
 	<%!class Product {
 String name;
@@ -65,5 +67,7 @@ for(int i=0;i<5;i++){
 
 <br><br>CHALLENGE : Create a List of 4 products. Loop through the list and print the name and price
 in a nice table.
+
+
 </body>
 </html>
