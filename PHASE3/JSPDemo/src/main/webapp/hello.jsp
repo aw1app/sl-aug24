@@ -8,10 +8,12 @@
 </head>
 <body>
 
-	<h1>Welcome to EStore</h1>
+	<h1><center>Welcome to EStore</center></h1>
 
+	<!-- Expressions Demo -->
 	<%=new java.util.Date()%>
 
+	<!-- Declaration Demo -->
 	<%!
 	int x = 100;
 	int y = 200;
@@ -35,9 +37,12 @@
 	
 	%>
 
-
+<!-- Declaration Demo -->
 <%! Product p1 = new Product("HP Mouse",25.5f); %>
+<!-- Expressions Demo -->
 <br> Price of the Product of the day : <%= p1.getPrice() %>
+
+CHALLENGE : Display name of the product.
 
 </body>
 </html>
