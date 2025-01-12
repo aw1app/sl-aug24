@@ -24,9 +24,10 @@ public class AddProductServlet extends HttpServlet {
 		String passwd = config.getInitParameter("dbpassword");
 
 		try {
+			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url, user, passwd);
 			stmt = connection.createStatement();
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 
 			e.printStackTrace();
 		}
@@ -40,7 +41,7 @@ public class AddProductServlet extends HttpServlet {
 		String priceStr = request.getParameter("price");
 		float price = Float.parseFloat(priceStr);
 
-		String sql = "INSERT INTO eproducts(name,price)  values ('" + name + "'," + price + ")";
+		String sql = "INSERT INTO eproducts(ProductName,Price)  values ('" + name + "'," + price + ")";
 		try {
 			int count = stmt.executeUpdate(sql);
 			out.println("Successfuly add " + count + "(s) products");
