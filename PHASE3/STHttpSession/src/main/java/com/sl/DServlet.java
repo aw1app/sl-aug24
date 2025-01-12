@@ -29,7 +29,10 @@ public class DServlet extends HttpServlet {
 		if(session!=null) {	
 			
 			out.println("Welcome User. I think you first went to Home and then have come to me. ");
-			out.println("<br> We are tracking you. SessionId : " + session.getId());		
+			out.println("<br> We are tracking you. SessionId : " + session.getId());
+			
+			Cart myCart = (Cart) session.getAttribute("cart");
+			out.println("Number of items in the cart: " + myCart.items.size());
 			
 		}else {
 			out.println("Welcome User. Looks like you directly came to me.");
