@@ -3,5 +3,9 @@
 <!DOCTYPE html>
 
 <div style="text-align: right;">
-<jsp:include page="header.jsp"></jsp:include>
+<span>
+	<a href="add-product.html"> Add Product</a></span>
+ | 	
+<span>
+	<a href="list-products.jsp">List Products</a></span>
 </div>

@@ -5,6 +5,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
+<div style="text-align: right;">
+<jsp:include page="header.jsp"></jsp:include>
+</div>
+
 <sql:setDataSource var="ecommerce" driver="com.mysql.cj.jdbc.Driver" 
 url="jdbc:mysql://localhost:3306/estore" user="root"
 	password="rootroot" />

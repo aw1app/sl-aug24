@@ -2,11 +2,14 @@
     pageEncoding="UTF-8" isErrorPage="true"%>
 <!DOCTYPE html>
 <html>
+
+<div style="text-align: right;">
+<jsp:include page="header.jsp"></jsp:include>
+</div>
+
+
 <p style="color:red"> Some thing went wrong. Contact admin</p>
 
 
-<span>
-	<a href="index.jsp"> Go Back to Home Page</a> | 	
-</span>
 
 </html>
