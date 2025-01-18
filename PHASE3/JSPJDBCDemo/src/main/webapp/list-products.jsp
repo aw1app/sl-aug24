@@ -23,6 +23,7 @@ url="jdbc:mysql://localhost:3306/estore" user="root"
 		<th>PRICE
 		<th>CATEGORY
 		<th>DELETE
+		<th>EDIT
 	</tr>
 
 	<c:forEach var="row" items="${resultSet.rows}">
@@ -32,6 +33,7 @@ url="jdbc:mysql://localhost:3306/estore" user="root"
 			<td> ${row.price}
 			<td>${row.category }
 			<td><a href="delete-product.jsp?ID=${row.productID}"> DELETE </a>
+			<td><a href="edit-product.jsp?ID=${row.productID}"> EDIT </a>
 		</tr>
 	</c:forEach>
 

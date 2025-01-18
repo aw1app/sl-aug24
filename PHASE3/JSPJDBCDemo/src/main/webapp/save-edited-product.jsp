@@ -10,7 +10,8 @@ url="jdbc:mysql://localhost:3306/estore" user="root"
 	
 	<sql:update dataSource="${ecommerce}" var="count">
 	
-	INSERT INTO eproducts(productName,price) values('<%=request.getParameter("name") %>',<%=request.getParameter("price") %>)
+	UPDATE eproducts SET price=<%=request.getParameter("price") %>, Category='<%=request.getParameter("Category") %>'
+	WHERE ProductID=<%=request.getParameter("ID") %>
 	
 	</sql:update>
 	
