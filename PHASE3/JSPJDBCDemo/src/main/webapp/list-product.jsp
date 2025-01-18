@@ -11,7 +11,7 @@ url="jdbc:mysql://localhost:3306/estore" user="root"
 	
 
 <sql:query dataSource="${ecommerce}" var="resultSet">
-	SELECT * FROM eproduct
+	SELECT * FROM eproducts
 </sql:query>	
 
 
