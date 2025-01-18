@@ -21,15 +21,15 @@ LIST OF PRODUCT <br>
 		<th>ID
 		<th>NAME
 		<th>PRICE
-		<th>DATE ADDED
+		<th>CATEGORY
 	</tr>
 
 	<c:forEach var="row" items="${resultSet.rows}">
 		<tr>
-			<td>${row.ID }
-			<td>${row.name }
+			<td>${row.productID }
+			<td>${row.productName }
 			<td> ${row.price}
-			<td>${row.date_added }
+			<td>${row.category }
 		</tr>
 	</c:forEach>
 
