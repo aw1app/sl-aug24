@@ -15,13 +15,14 @@ url="jdbc:mysql://localhost:3306/estore" user="root"
 </sql:query>	
 
 
-LIST OF PRODUCT <br>
+<br>LIST OF PRODUCT <br>
 <table border=1>
 	<tr style="background-color:lightgrey">
 		<th>ID
 		<th>NAME
 		<th>PRICE
 		<th>CATEGORY
+		<th>DELETE
 	</tr>
 
 	<c:forEach var="row" items="${resultSet.rows}">
@@ -30,6 +31,7 @@ LIST OF PRODUCT <br>
 			<td>${row.productName }
 			<td> ${row.price}
 			<td>${row.category }
+			<td><a href="delete-product.jsp?ID=${row.productID}"> DELETE </a>
 		</tr>
 	</c:forEach>
 
