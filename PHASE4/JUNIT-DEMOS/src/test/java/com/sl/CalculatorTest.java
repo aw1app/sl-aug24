@@ -20,6 +20,20 @@ class CalculatorTest {
 		assertEquals(result, expectedResult);		
 	}
 	
+	@Test
+	void testAdd1() {
+		Calculator cal = new Calculator();
+		
+		int input1 = 11;
+		int input2 = -25;
+		
+		int expectedResult = -14;
+		
+		int result = cal.add(input1, input2); // should be -14
+		
+		assertEquals(result, expectedResult);		
+	}
+	
 	//CHALLENGE: Write a TC for Divide method 
 
 }
