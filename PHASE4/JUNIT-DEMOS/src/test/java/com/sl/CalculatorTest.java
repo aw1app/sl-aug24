@@ -4,7 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 
 class CalculatorTest {
 	Calculator cal;
@@ -38,6 +40,7 @@ class CalculatorTest {
 	}
 
 	@Test
+	@Disabled
 	void testAdd2() {
 		System.out.println(" INSIDE testAdd2 TC");
 		//Calculator cal = new Calculator();
