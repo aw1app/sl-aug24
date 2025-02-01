@@ -13,9 +13,11 @@ class CalculatorTest {
 		int input1 = 4;
 		int input2 = 5;
 		
+		int expectedResult = 9;
+		
 		int result = cal.add(input1, input2); // should be 9
 		
-		assertEquals(result, 9);		
+		assertEquals(result, expectedResult);		
 	}
 	
 	//CHALLENGE: Write a TC for Divide method 
