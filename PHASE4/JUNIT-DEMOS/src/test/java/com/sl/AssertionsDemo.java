@@ -45,8 +45,7 @@ public class AssertionsDemo {
 		
 		assertThrows(ArithmeticException.class, () -> {
 			new Calculator().divide(10, 1);
-		});
-		
+		});		
 		
 	}
 	
