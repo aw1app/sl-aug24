@@ -6,7 +6,8 @@
 
 	<!-- Bean definition for Product using constructor-->
 	<bean id="product1" class="com.sl.Product">
-		<constructor-arg value="Samsung Galaxy Phone" />
+		<constructor-arg value="Samsung Galaxy Phone"  />
+		<constructor-arg value="Some Desc" />
 		<constructor-arg value="999" />
 	</bean>
 	

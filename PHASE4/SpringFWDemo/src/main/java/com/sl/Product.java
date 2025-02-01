@@ -3,19 +3,29 @@ package com.sl;
 public class Product {
 	
 	String name;
+	String desc;
 	float price;
 	
 	public Product() {
 		
 	}
 		
-	public Product(String name, float price) {
+	public Product(String name, String desc, float price) {
 		super();
 		this.name = name;
+		this.desc = desc;
 		this.price = price;
 	}
 	
 	
+	public String getDesc() {
+		return desc;
+	}
+//
+//	public void setDesc(String desc) {
+//		this.desc = desc;
+//	}
+
 	public String getName() {
 		return name;
 	}

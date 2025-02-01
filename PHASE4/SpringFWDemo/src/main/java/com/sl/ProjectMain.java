@@ -12,6 +12,7 @@ public class ProjectMain {
 		Product p1 = (Product) context.getBean("product1");
 
 		System.out.println("Product p1's name is " + p1.getName());
+		System.out.println("Product p1's desc is " + p1.getDesc());
 		System.out.println("Product p1's price is " + p1.getPrice());
 
 		// Property setter Injection Demo
