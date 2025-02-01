@@ -34,7 +34,7 @@ class CalculatorTest {
 
 		int result = cal.add(input1, input2); // should be 9
 
-		assertEquals(result, expectedResult);
+		assertEquals(expectedResult , result );
 	}
 
 	@Test
@@ -49,7 +49,7 @@ class CalculatorTest {
 
 		int result = cal.add(input1, input2); // should be -14
 
-		assertEquals(result, expectedResult);
+		assertEquals(expectedResult , result );
 	}
 
 	// CHALLENGE: Write a TC for Divide method
