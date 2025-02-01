@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Bean definition for Product using constructor-->
+	<bean id="product1" class="com.sl.Product">
+		<constructor-arg value="Samsung Galaxy Phone" />
+		<constructor-arg value="999" />
+	</bean>
+	
+
+	<!-- Bean definition for Product using setter injection-->
+	<bean id="product2" class="com.sl.Product">
+		<property name="name" value="SSD Drive" />
+		<property name="price" value="99" />
+	</bean>
+	
+	
+
+</beans>
