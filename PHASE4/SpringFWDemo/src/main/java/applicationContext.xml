@@ -5,15 +5,29 @@
 
 
 	<!-- Bean definition for Product using constructor-->
-	<bean id="product1" class="com.sl.Product">
+	<bean id="product1" class="com.sl.ProductV2">
 		<constructor-arg value="Samsung Galaxy Phone"  />
 		<constructor-arg value="Some Desc" />
 		<constructor-arg value="999" />
 	</bean>
 	
+	
+	
+	<!-- Bean definition for Product using constructor having four arguments-->
+	<bean id="brand1" class="com.sl.Brand">
+		<constructor-arg value="Samsung Inc" />
+	</bean>
+	
+	<bean id="product3" class="com.sl.ProductV2">
+		<constructor-arg value="Samsung Galaxy Phone 3 "  />
+		<constructor-arg value="Some Desc 3" />
+		<constructor-arg value="1999" />
+		<constructor-arg  ref="brand1" />
+	</bean>
+	
 
 	<!-- Bean definition for Product using setter injection-->
-	<bean id="product2" class="com.sl.Product">
+	<bean id="product2" class="com.sl.ProductV2">
 		<property name="name" value="SSD Drive" />
 		<property name="price" value="99" />
 	</bean>

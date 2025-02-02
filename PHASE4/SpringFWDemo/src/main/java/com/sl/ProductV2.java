@@ -1,6 +1,6 @@
 package com.sl;
 
-public class Product implements IProduct{
+public class ProductV2 implements IProduct{
 	
 	String name;
 	String desc;
@@ -8,20 +8,33 @@ public class Product implements IProduct{
 	
 	Brand brand;
 	
-	public Product() {
+	public ProductV2() {
 		
 	}
 		
-	public Product(String name, String desc, float price) {
+	public ProductV2(String name, String desc, float price) {
 		super();
 		this.name = name;
 		this.desc = desc;
 		this.price = price;
 	}
 	
-	public Brand getBrand() {
-		return this.brand;
+	public ProductV2(String name, String desc, float price, Brand brand) {
+		super();
+		this.name = name;
+		this.desc = desc;
+		this.price = price;
+		this.brand = brand;
 	}
+	
+	public Brand getBrand() {
+		return brand;
+	}
+	
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+	
 	
 	public String getDesc() {
 		return desc;
@@ -32,7 +45,7 @@ public class Product implements IProduct{
 //	}
 
 	public String getName() {
-		return name;
+		return name.toUpperCase();
 	}
 	public void setName(String name) {
 		this.name = name;
