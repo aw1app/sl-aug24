@@ -25,5 +25,15 @@ public class MyProductConfig {
 		
 		return p;		
 	}
+	
+	@Bean(name = "product3")
+	public Product createBrandedProduct() {
+		
+		Brand b = new Brand("Peter England");
+		
+		Product p = new Product("HP Laptop",  "DESC 1",55550.0f,b );		
+		
+		return p;		
+	}
 
 }

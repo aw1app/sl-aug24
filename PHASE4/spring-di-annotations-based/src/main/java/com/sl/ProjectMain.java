@@ -22,6 +22,13 @@ public class ProjectMain {
 		System.out.println("Product p2's name is " + p2.getName());
 		System.out.println("Product p2's desc is " + p2.getDesc());
 		System.out.println("Product p2's price is " + p2.getPrice());
+		
+		Product p3 = (Product) context.getBean("product3");
+
+		System.out.println("Product p3's name is " + p3.getName());
+		System.out.println("Product p3's desc is " + p3.getDesc());
+		System.out.println("Product p3's price is " + p3.getPrice());
+		System.out.println("Product p3's brand is " + p3.getBrand().getName());
 
 	}
 

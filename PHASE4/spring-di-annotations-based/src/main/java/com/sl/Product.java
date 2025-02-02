@@ -19,6 +19,15 @@ public class Product{
 		this.price = price;
 	}
 	
+	public Product(String name, String desc, float price,Brand brand ) {
+		super();
+		this.name = name;
+		this.desc = desc;
+		this.price = price;
+		this.brand = brand;
+	}
+	
+	
 	public Brand getBrand() {
 		return this.brand;
 	}
