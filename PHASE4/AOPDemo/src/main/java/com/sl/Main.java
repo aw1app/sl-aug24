@@ -16,7 +16,13 @@ public class Main {
 		BankAccount bankAcct = (BankAccount) context.getBean(BankAccount.class);
 		
 		bankAcct.deposit(10000.0d);
-
+		
+		bankAcct.withdraw(1000.0d);	
+		
+		
+		X x1 = (X) context.getBean(X.class);
+		
+		x1.methodX1();
 	}
 
 }
