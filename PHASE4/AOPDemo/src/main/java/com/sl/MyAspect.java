@@ -33,5 +33,8 @@ public class MyAspect {
 			System.out.println("(LOG) Hi, this is an After Returtning type INTERCEPTOR/ADVICE " + " Amount " + result
 					+ " was withdrawn!");
 	}
+	
+	// Challenge : How will you measure performance (execution time) of your methods in BankAccount.
+	// Implement Around and for Exceptions thrown in methods of BankAccount.
 
 }
