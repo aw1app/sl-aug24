@@ -5,20 +5,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HelloWorldController {
+public class HomeController {
 	
-	@GetMapping("/hello")
+	@GetMapping("/path1")
 	@ResponseBody
-	public String hello() {
+	public String path1() {
 
-		return "hello :Hi there";
+		return "<h1>hello from path1!</h1>";
 	}
 	
-	@GetMapping("/hello2")
-	@ResponseBody
-	public String hello2() {
+	@GetMapping("/path2")
+	public String path2() {
 
-		return "hello from hello 2";
+		return "b"; // render b.jsp in the views folder
 	}
+	
+	
 
 }

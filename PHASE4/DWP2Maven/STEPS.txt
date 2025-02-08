@@ -1,0 +1,11 @@
+Create DWP
+Configure -> Convert to Maven project
+Edit pom.xml 
+	Add the properties tag having Java and Spring versions
+	Add the dependencies block for all the spring modules we want
+	
+Add main-servlet.xml into WEB-INF folder
+Add web.xml into WEB-INF folder
+
+
+Then create your project specific Java files / JSP files ...
