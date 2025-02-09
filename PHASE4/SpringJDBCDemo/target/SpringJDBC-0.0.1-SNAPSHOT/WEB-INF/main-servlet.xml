@@ -55,11 +55,11 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	</bean>
 	
 	<bean id="dao" class="com.sl.dao.StudentDAO">
-		<property name="template" ref="jdbctemplate" />
+		<property name="myStudentTemplate" ref="jdbctemplate" />
 	</bean>
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.sl" />
+	<context:component-scan base-package="com.sl.controller" />
 	<context:component-scan base-package="com.sl.entity" />	
 	<context:component-scan base-package="com.sl.dao" />		
 	

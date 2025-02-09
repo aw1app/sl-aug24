@@ -1,5 +1,5 @@
+com\sl\controller\StudentController.class
 com\sl\dao\StudentDAO.class
-com\sl\WebConfig.class
 com\sl\entity\Student.class
-com\sl\StudentController.class
+com\sl\controller\WebConfig.class
 com\sl\dao\StudentRowMapper.class
