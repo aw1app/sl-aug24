@@ -26,9 +26,14 @@ public class StudentController {
 	@GetMapping("/listStudents")
 	public String getStudents(Model model) {
 
-		// Business logic
+		
 		List<Student> students = studentDAO.getAllStudents();
+		
+		// Business logic
+		//...
+		//..
 
+		// Create/Populate the model
 		model.addAttribute("students", students);
 
 		return "list-students"; // display list-students.jsp
