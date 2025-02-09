@@ -13,15 +13,17 @@ import com.sl.entity.Student;
 public class StudentDAO {
 
 	@Autowired
-	JdbcTemplate template;
+	JdbcTemplate myStudentTemplate;
 
 	public void setTemplate(JdbcTemplate template) {
-		this.template = template;
+		this.myStudentTemplate = template;
 	}
 
+	//CRUD Ops
+	
 	// 1. List all students from students table
 	public List<Student> getAllStudents() {
-		return template.query("SELECT * FROM students", new StudentRowMapper());
+		return myStudentTemplate.query("SELECT * FROM students", new StudentRowMapper());
 	}
 	
 	//2. 
