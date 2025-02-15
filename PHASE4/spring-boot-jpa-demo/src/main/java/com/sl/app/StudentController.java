@@ -49,23 +49,35 @@ public class StudentController {
 	/* Create a student */
 	@GetMapping("/add-student")
 	public String addStudentShowForm(Model model) {
-		
+
 		Student student = new Student();
 		model.addAttribute("student", student);
 
 		return "add-student"; // goes to add-student.jsp in the views folder
 
 	}
-	
+
 	@PostMapping("/add-student")
 	public String addStudent(Model model, @ModelAttribute("student") Student student) {
 		Student createdStudent = studentRepositry.save(student);
-		
+
 		model.addAttribute("studentId", createdStudent.getStudentId());
-		
+
 		return "add-student-success";
 	}
-	
+
 	/* Delete a student */
+
+	// Special Cases list all students given thier first name
+	/* List all students */
+	@GetMapping("/list-by-first-name")
+	public String listAllStudentsByThierFirstName(Model model,  @RequestParam(name = "firstName") String firstName) {
+
+		List<Student> students = studentRepositry.findAllByFirstName(firstName);
+
+		model.addAttribute("students", students);
+
+		return "list-students";
+	}
 
 }
