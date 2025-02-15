@@ -7,9 +7,7 @@
 			<th>ID
 			<th>FISRT_NAME
 			<th>LAST_NAME
-			<th>DETAILS
-			<th>EDIT
-			<th>DELETE
+			
 		</tr>
 
 		<c:forEach var="student" items="${students}">
