@@ -7,6 +7,7 @@
 			<th>ID
 			<th>FISRT_NAME
 			<th>LAST_NAME
+			<th>DETAILS
 			
 		</tr>
 
@@ -15,6 +16,7 @@
 				<td>${student.studentId}
 				<td>${student.firstName}
 				<td>${student.lastName}
+				<td><a href="details?id=${student.studentId}">SHOW DETAILS</a>
 			</tr>
 		</c:forEach>
 

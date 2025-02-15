@@ -65,5 +65,7 @@ public class StudentController {
 		
 		return "add-student-success";
 	}
+	
+	/* Delete a student */
 
 }
