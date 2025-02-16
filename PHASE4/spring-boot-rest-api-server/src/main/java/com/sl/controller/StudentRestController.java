@@ -57,7 +57,7 @@ public class StudentRestController {
 //
 //	}
 	
-	/* List details of a single student using  Request parameter*/
+	/* List details of a single student using  @PathVariable*/
 //	@GetMapping("/details/{id}")
 //	public Student getStudentV2(@PathVariable int id) {
 //
@@ -73,7 +73,7 @@ public class StudentRestController {
 //		}
 //	}
 	
-	/* List details of a single student using  Request parameter*/
+	/* List details of a single student using  @PathVariable*/
 	@GetMapping("/details/{id}")
 	public ResponseEntity<Student> getStudentV3(@PathVariable int id) {
 
