@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sl.entity.Student;
@@ -58,8 +58,24 @@ public class StudentRestController {
 //	}
 	
 	/* List details of a single student using  Request parameter*/
+//	@GetMapping("/details/{id}")
+//	public Student getStudentV2(@PathVariable int id) {
+//
+//		Optional<Student> optionalStudent = studentRepositry.findById(id);
+//
+//		if (optionalStudent.isPresent()) {
+//
+//			Student student = optionalStudent.get();
+//
+//			return student;
+//		} else {
+//			return null;
+//		}
+//	}
+	
+	/* List details of a single student using  Request parameter*/
 	@GetMapping("/details/{id}")
-	public Student getStudentV2(@PathVariable int id) {
+	public ResponseEntity<Student> getStudentV3(@PathVariable int id) {
 
 		Optional<Student> optionalStudent = studentRepositry.findById(id);
 
@@ -67,11 +83,14 @@ public class StudentRestController {
 
 			Student student = optionalStudent.get();
 
-			return student;
+			return ResponseEntity.ok(student);
 		} else {
-			return null;
+			return ResponseEntity.ofNullable(null);
 		}
-
 	}
+	
+	//CHALLENGE: Delete a Student given the id.
+	//CHALLENGE: Update (Edit) a Student given the id.
+	
 
 }
