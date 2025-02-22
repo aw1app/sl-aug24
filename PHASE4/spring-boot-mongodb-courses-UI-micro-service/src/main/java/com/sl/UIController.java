@@ -24,6 +24,8 @@ public class UIController{
 	@GetMapping("/display-courses")
 	public String displayAllCourses(Model model) {
 		
+		try {
+		
 		List<Course> courses = restTemplate.exchange(
 				"http://localhost:8081/courses/all", 
 				HttpMethod.GET,
@@ -33,6 +35,11 @@ public class UIController{
 				getBody();
 		
 		model.addAttribute("courses", courses);
+		model.addAttribute("hasError", false);
+		}catch(Exception e) {
+			System.out.println("ERROR "+e.getMessage());
+			model.addAttribute("hasError", true);
+		};
 		
 		return "courses"; // courses.jsp
 		
