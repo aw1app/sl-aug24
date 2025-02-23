@@ -27,7 +27,8 @@ public class UIController{
 		try {
 		
 		List<Course> courses = restTemplate.exchange(
-				"http://localhost:8081/courses/all", 
+				//"http://localhost:8081/courses/all", 
+				"http://spring-cloud-mongodb-courses-micro-service/courses/all",
 				HttpMethod.GET,
 				null,
 				new ParameterizedTypeReference< List<Course> >()  {}
@@ -50,7 +51,7 @@ public class UIController{
 	public String displayAllCourses(@PathVariable String id, Model model) {
 		
 		Course course = restTemplate.exchange(
-				"http://localhost:8081/courses/course/"+id, 
+				"http://spring-cloud-mongodb-courses-micro-service/courses/course/"+id, 
 				HttpMethod.GET,
 				null,
 				new ParameterizedTypeReference< Course >()  {}
