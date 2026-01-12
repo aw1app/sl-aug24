@@ -60,7 +60,7 @@ public class TransactionWithSavePointDemo {
 			
 			try {
 				connection.rollback(savePoint1);
-				//connection.rollback();
+				connection.commit();
 				System.err.println("Rollback happened!");
 			} catch (SQLException e1) {				
 				e1.printStackTrace();
